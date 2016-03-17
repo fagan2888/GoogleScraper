@@ -6,3 +6,9 @@ PyMySql
 sqlalchemy
 aiohttp
 # redis
+
+## Installed all under conda environment created with python 3.5
+## Have all conda things that came with specifying Python 3.5
+## Had to `conda install` lxml because I got an error when tried `pip install`
+## Everything else installed with `pip`
+## Did not install `redis` since I don't know why it is currently commented with `#`
