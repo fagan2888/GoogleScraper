@@ -121,7 +121,8 @@ class SearchEngineResultsPage(Base):
                     parsed = urlparse(link['link'])
 
                     # fill with nones to prevent key errors
-                    [link.update({key: None}) for key in ('snippet', 'title', 'visible_link') if key not in link]
+                    [link.update({key: None}) for key in ('snippet', 'title', 'visible_link', 'has_image', \
+                    'news_date', 'image_dims','news_source') if key not in link]
 
                     Link(
                         link=link['link'],
@@ -131,7 +132,12 @@ class SearchEngineResultsPage(Base):
                         domain=parsed.netloc,
                         rank=link['rank'],
                         serp=self,
-                        link_type=key
+                        link_type=key,
+
+                        has_image=link['has_image'],
+                        image_dims=link['image_dims'],
+                        news_date=link['news_date'],
+                        news_source=link['news_source']
                     )
 
     def set_values_from_scraper(self, scraper):
@@ -174,6 +180,11 @@ class Link(Base):
     visible_link = Column(String)
     rank = Column(Integer)
     link_type = Column(String)
+
+    has_image = Column(String)
+    image_dims = Column(String)
+    news_date = Column(String)
+    news_source = Column(String)
 
     serp_id = Column(Integer, ForeignKey('serp.id'))
     serp = relationship(SearchEngineResultsPage, backref=backref('links', uselist=True))
@@ -232,7 +243,7 @@ class SearchEngine(Base):
 
 class SearchEngineProxyStatus(Base):
     """Stores last proxy status for the given search engine.
-    
+
     A proxy can either work on a search engine or not.
     """
 
@@ -270,6 +281,8 @@ def get_session(config, scoped=False, engine=None, path=None):
         bind=engine,
         autoflush=True,
         autocommit=False,
+        #http://stackoverflow.com/questions/3039567/sqlalchemy-detachedinstanceerror-with-regular-attribute-not-a-relation
+        expire_on_commit=False  # prevents sqlalchemy.orm.exc.DetachedInstanceError error
     )
 
     if scoped:

@@ -30,12 +30,12 @@ class Parser():
     """Parses SERP pages.
 
     Each search engine results page (SERP) has a similar layout:
-    
+
     The main search results are usually in a html container element (#main, .results, #leftSide).
-    There might be separate columns for other search results (like ads for example). Then each 
+    There might be separate columns for other search results (like ads for example). Then each
     result contains basically a link, a snippet and a description (usually some text on the
     target site). It's really astonishing how similar other search engines are to Google.
-    
+
     Each child class (that can actual parse a concrete search engine results page) needs
     to specify css selectors for the different search types (Like normal search, news search, video search, ...).
 
@@ -73,10 +73,10 @@ class Parser():
         """Create new Parser instance and parse all information.
 
         Args:
-            html: The raw html from the search engine search. If not provided, you can parse 
+            html: The raw html from the search engine search. If not provided, you can parse
                     the data later by calling parse(html) directly.
             searchtype: The search type. By default "normal"
-            
+
         Raises:
             Assertion error if the subclassed
             specific parser cannot handle the the settings.
@@ -109,8 +109,8 @@ class Parser():
 
     def parse(self, html=None):
         """Public function to start parsing the search engine results.
-        
-        Args: 
+
+        Args:
             html: The raw html data to extract the SERP entries from.
         """
         if html:
@@ -137,7 +137,7 @@ class Parser():
 
     def _parse(self, cleaner=None):
         """Internal parse the dom according to the provided css selectors.
-        
+
         Raises: InvalidSearchTypeException if no css selectors for the searchtype could be found.
         """
         self.num_results = 0
@@ -194,7 +194,11 @@ class Parser():
                 to_extract = set(selectors.keys()) - {'container', 'result_container'}
                 selectors_to_use = {key: selectors[key] for key in to_extract if key in selectors.keys()}
 
+                # print("  ", len(results))
+
                 for index, result in enumerate(results):
+                    # if result_type == 'image_box':
+                    #     print(dir(result))
                     # Let's add primitive support for CSS3 pseudo selectors
                     # We just need two of them
                     # ::text
@@ -279,7 +283,7 @@ class Parser():
 
     def after_parsing(self):
         """Subclass specific behaviour after parsing happened.
-        
+
         Override in subclass to add search engine specific behaviour.
         Commonly used to clean the results.
         """
@@ -312,7 +316,7 @@ class Parser():
 
 
 """
-Here follow the different classes that provide CSS selectors 
+Here follow the different classes that provide CSS selectors
 for different types of SERP pages of several common search engines.
 
 Just look at them and add your own selectors in a new class if you
@@ -356,46 +360,68 @@ class GoogleParser(Parser):
         'results': {
             'us_ip': {
                 'container': '#center_col',
-                'result_container': 'div.g ',
-                'link': 'h3.r > a:first-child::attr(href)',
+                'result_container': 'div.g:not(.card-section)',
+                'link': 'h3.r a::attr(href)',
                 'snippet': 'div.s span.st::text',
-                'title': 'h3.r > a:first-child::text',
+                'title': 'h3.r a::text',
                 'visible_link': 'cite::text'
             },
-            'de_ip': {
+            # 'de_ip': {
+            #     'container': '#center_col',
+            #     'result_container': 'li.g ',
+            #     'link': 'h3.r > a:first-child::attr(href)',
+            #     'snippet': 'div.s span.st::text',
+            #     'title': 'h3.r > a:first-child::text',
+            #     'visible_link': 'cite::text'
+            # },
+            # 'de_ip_news_items': {
+            #     'container': 'li.card-section',
+            #     'link': 'a._Dk::attr(href)',
+            #     'snippet': 'span._dwd::text',
+            #     'title': 'a._Dk::text',
+            #     'visible_link': 'cite::text'
+            # },
+         },
+        'image_box':{
+            'us_ip':{
+                'container': '#rhs_block',
+                'result_container': '.rg_el',
+                'image_dims': '.bicc a::attr(style)',
+                'link': 'a::attr(href)',
+                'visible_link': 'img::attr(title)',
+                'has_image': 'img::attr(alt)',
+            },
+        },
+        'news_box':{
+            'us_ip':{
                 'container': '#center_col',
-                'result_container': 'li.g ',
-                'link': 'h3.r > a:first-child::attr(href)',
-                'snippet': 'div.s span.st::text',
-                'title': 'h3.r > a:first-child::text',
-                'visible_link': 'cite::text'
-            },
-            'de_ip_news_items': {
-                'container': 'li.card-section',
+                'result_container': '.card-section.g',
                 'link': 'a._Dk::attr(href)',
-                'snippet': 'span._dwd::text',
+                'snippet': 'span.st::text',
                 'title': 'a._Dk::text',
-                'visible_link': 'cite::text'
+                'news_date': '._Ck span:last-child::text',
+                'news_source': 'cite::text',
+                'has_image': '._WCg::attr(alt)'
             },
         },
         'ads_main': {
             'us_ip': {
                 'container': '#center_col',
                 'result_container': 'li.ads-ad',
-                'link': 'h3.r > a:first-child::attr(href)',
-                'snippet': 'div.s span.st::text',
-                'title': 'h3.r > a:first-child::text',
-                'visible_link': '.ads-visurl cite::text',
-            },
-            'de_ip': {
-                'container': '#center_col',
-                'result_container': '.ads-ad',
-                'link': 'h3 > a:first-child::attr(href)',
+                'link': 'h3 a:last-child::attr(href)',
                 'snippet': '.ads-creative::text',
-                'title': 'h3 > a:first-child::text',
-                'visible_link': '.ads-visurl cite::text',
-            }
-        },
+                'title': 'h3 a:last-child::text',
+                'visible_link': '.ads-visurl cite::text'
+            },
+        #     'de_ip': {
+        #         'container': '#center_col',
+        #         'result_container': '.ads-ad',
+        #         'link': 'h3 > a:first-child::attr(href)',
+        #         'snippet': '.ads-creative::text',
+        #         'title': 'h3 > a:first-child::text',
+        #         'visible_link': '.ads-visurl cite::text'
+        #     }
+         },
         'ads_aside': {
 
         }
@@ -412,7 +438,7 @@ class GoogleParser(Parser):
                 'container': '.images_table',
                 'result_container': 'tr td',
                 'link': 'a::attr(href)',
-                'visible_link': 'cite::text',
+                'visible_link': 'cite::text'
             }
         }
     }
@@ -422,12 +448,12 @@ class GoogleParser(Parser):
 
     def after_parsing(self):
         """Clean the urls.
-        
+
         A typical scraped results looks like the following:
-        
+
         '/url?q=http://www.youtube.com/user/Apple&sa=U&ei=\
         lntiVN7JDsTfPZCMgKAO&ved=0CFQQFjAO&usg=AFQjCNGkX65O-hKLmyq1FX9HQqbb9iYn9A'
-        
+
         Clean with a short regex.
         """
         super().after_parsing()
@@ -1049,12 +1075,12 @@ def parse_serp(config, html=None, parser=None, scraper=None, search_engine=None,
 
 if __name__ == '__main__':
     """Originally part of https://github.com/NikolaiT/GoogleScraper.
-    
-    Only for testing purposes: May be called directly with an search engine 
+
+    Only for testing purposes: May be called directly with an search engine
     search url. For example:
-    
+
     python3 parsing.py 'http://yandex.ru/yandsearch?text=GoogleScraper&lr=178&csg=82%2C4317%2C20%2C20%2C0%2C0%2C0'
-    
+
     Please note: Using this module directly makes little sense, because requesting such urls
     directly without imitating a real browser (which is done in my GoogleScraper module) makes
     the search engines return crippled html, which makes it impossible to parse.

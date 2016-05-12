@@ -43,6 +43,7 @@ def get_selenium_scraper_by_search_engine_name(config, search_engine_name, *args
         Either a concrete SelScrape instance specific for the given search engine or the abstract SelScrape object.
     """
     class_name = search_engine_name[0].upper() + search_engine_name[1:].lower() + 'SelScrape'
+    print(class_name)
     ns = globals()
     if class_name in ns:
         return ns[class_name](config, *args, **kwargs)
@@ -127,6 +128,7 @@ class SelScrape(SearchEngineScrape, threading.Thread):
             proxy: Optional, if set, use the proxy to route all scrapign through it.
             browser_num: A unique, semantic number for each thread.
         """
+        print("creating a new SelScraper thread instance")
         self.search_input = None
 
         threading.Thread.__init__(self)
@@ -521,6 +523,7 @@ class SelScrape(SearchEngineScrape, threading.Thread):
         Fills out the search form of the search engine for each keyword.
         Clicks the next link while pages_per_keyword is not reached.
         """
+        print("\nstart `search` function to fill in search engine:  ...\n")
         for self.query, self.pages_per_keyword in self.jobs.items():
 
             self.search_input = self._wait_until_search_input_field_appears()
@@ -576,6 +579,7 @@ class SelScrape(SearchEngineScrape, threading.Thread):
             for self.page_number in self.pages_per_keyword:
 
                 self.wait_until_serp_loaded()
+                self.html = self.webdriver.page_source
 
                 try:
                     self.html = self.webdriver.execute_script('return document.body.innerHTML;')
@@ -614,14 +618,16 @@ class SelScrape(SearchEngineScrape, threading.Thread):
 
     def run(self):
         """Run the SelScraper."""
+        print("Run the SelScraper")
 
         self._set_xvfb_display()
+        print("set xvfb disply")
 
         if not self._get_webdriver():
             raise Exception('{}: Aborting due to no available selenium webdriver.'.format(self.name))
 
         try:
-            self.webdriver.set_window_size(400, 400)
+            self.webdriver.set_window_size(1200, 550)
             self.webdriver.set_window_position(400 * (self.browser_num % 4), 400 * (math.floor(self.browser_num // 4)))
         except WebDriverException as e:
             logger.debug('Cannot set window size: {}'.format(e))

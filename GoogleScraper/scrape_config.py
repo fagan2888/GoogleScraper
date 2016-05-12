@@ -192,14 +192,14 @@ proxy_info_url = 'http://ipinfo.io/json'
 base_search_url = 'http://www.google.com/search'
 
 # Whether caching shall be enabled
-do_caching = True
+do_caching = False
 
 # Whether the whole html files should be cached or
 # if the file should be stripped from unnecessary data like javascripts, comments, ...
 minimize_caching_files = True
 
 # If set, then compress/decompress cached files
-compress_cached_files = True
+compress_cached_files = False
 
 # Use either bz2 or gz to compress cached files
 compressing_algorithm = 'gz'

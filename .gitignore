@@ -22,6 +22,8 @@ test_functionality/
 h.py
 
 images/
+old_images/
+images_TESTING/
 
 .ipynb_checkpoints
 
