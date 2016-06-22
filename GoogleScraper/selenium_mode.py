@@ -338,7 +338,7 @@ class SelScrape(SearchEngineScrape, threading.Thread):
         self.webdriver.get(starting_point)
 
     def _get_search_param_values(self):
-        search_param_values = {}
+        search_param_values = {'pws':'0'}
         if self.search_engine_name in self.search_params:
             for param_key in self.search_params[self.search_engine_name]:
                 cfg = self.config.get(param_key, None)

@@ -195,3 +195,6 @@ scheduler.start()
 
 while True:
 	time.sleep(1)
+
+
+# nohup python -u candidate_scraper.py > nohup.txt &

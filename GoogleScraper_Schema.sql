@@ -44,9 +44,26 @@ SHOW columns FROM google_scraper.search_engine_results;
 SELECT * FROM google_scraper.search_engine_results; 
 SELECT * FROM google_scraper.search_engine_results_TESTING; 
 select * FROM google_scraper.serp;
+SELECT * from google_scraper.search_engine_results_TESTING WHERE link_type = 'results' AND content_HTML is NULL LIMIT 125;
+SELECT count * search_results_dec15;
 
 # Creating new replica table for real collection
 # First, rename testing table:
 RENAME TABLE google_scraper.search_engine_results TO google_scraper.search_engine_results_TESTING;
+RENAME TABLE google_scraper.serp TO google_scraper.serp_TESTING;
+
 # Now duplicate the TESTING table with all same cols and keys, but without the data
 CREATE TABLE google_scraper.search_engine_results LIKE google_scraper.search_engine_results_TESTING;
+CREATE TABLE google_scraper.serp LIKE google_scraper.serp_TESTING;
+DROP TABLE google_scraper.search_engine_results;
+
+ALTER TABLE google_scraper.search_engine_results_TESTING ADD COLUMN content_HTML longtext;
+ALTER TABLE google_scraper.search_engine_results_TESTING ADD COLUMN content_text longtext;
+ALTER TABLE google_scraper.search_engine_results_TESTING ADD COLUMN doc_sentiment varchar(100);
+ALTER TABLE google_scraper.search_engine_results_TESTING ADD COLUMN doc_score decimal(10,9);
+ALTER TABLE google_scraper.search_engine_results_TESTING ADD COLUMN doc_mixed int(11);
+ALTER TABLE google_scraper.search_engine_results_TESTING ADD COLUMN grab_datetime datetime;
+
+INSERT INTO  search_engine_results_TESTING (content_HTML, content_text, doc_sentiment, doc_score, doc_mixed, grab_datetime) VALUES (content_HTML, content_text, doc_sentiment, doc_score, doc_mixed, grab_datetime);
+UPDATE search_engine_results_TESTING SET content_HTML = content_HTML;
+UPDATE search_engine_results_TESTING SET content_HTML = content_HTML,content_text = content_text,doc_sentiment = doc_sentiment,doc_score = doc_score,doc_mixed = doc_mixed, grab_datetime = grab_datetime;

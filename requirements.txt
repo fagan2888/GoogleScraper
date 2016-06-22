@@ -1,14 +1,14 @@
-lxml
-selenium
-cssselect
-requests
-PyMySql
-sqlalchemy
-aiohttp
-# redis
-
-## Installed all under conda environment created with python 3.5
-## Have all conda things that came with specifying Python 3.5
-## Had to `conda install` lxml because I got an error when tried `pip install`
-## Everything else installed with `pip`
-## Did not install `redis` since I don't know why it is currently commented with `#`
+aiohttp==0.21.4
+APScheduler==3.1.0
+chardet==2.3.0
+chromedriver==2.21.1
+cssselect==0.9.1
+GoogleScraper==0.2.1
+lxml==3.6.0
+PyMySQL==0.7.2
+pytz==2016.4
+requests==2.9.1
+selenium==2.53.2
+six==1.10.0
+SQLAlchemy==1.0.12
+tzlocal==1.2.2
