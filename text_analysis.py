@@ -99,7 +99,7 @@ def text_stats():
             print('grab_datetime', grab_datetime)
 
 
-            query = "UPDATE google_scraper.search_engine_results SET content_HTML = %s, content_text = %s, doc_sentiment = %s, doc_score = %s, doc_mixed = %s, grab_datetime = %s WHERE id = %s"
+            query = "UPDATE search_engine_results SET content_HTML = %s, content_text = %s, doc_sentiment = %s, doc_score = %s, doc_mixed = %s, grab_datetime = %s WHERE id = %s"
             data = (content_HTML, content_text, doc_sentiment, doc_score, doc_mixed, grab_datetime, row['id'])
 
             cursor.execute(query, data)

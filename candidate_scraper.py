@@ -30,7 +30,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import time
 
 
-counter = 0
+counter = 23
 
 keywords = [
     'bernie sanders',
@@ -114,7 +114,7 @@ def put_in_database():
                 if link.link_type == 'image_box':
 
                     height = re.compile('height:(\d+)')
-                    h = height.match(link.image_dims)
+                    h = height.search(link.image_dims)
                     image_height = int(h.group(1))
 
                     width = re.compile('width:(\d+)')
@@ -177,7 +177,7 @@ def put_in_database():
 
 
                 # Create a new record into search_engine_results table
-                sql = "INSERT INTO search_engine_results_TESTING (link, title, snippet, visible_link, rank, link_type, serp_id, has_image, image_dims, image_height, image_width, news_date, news_source, image_path) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+                sql = "INSERT INTO search_engine_results (link, title, snippet, visible_link, rank, link_type, serp_id, has_image, image_dims, image_height, image_width, news_date, news_source, image_path) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
                 cur.execute(sql,(link.link, link.title, link.snippet, link.visible_link, link.rank, link.link_type, serp_id, link.has_image, link.image_dims, image_height, image_width, link.news_date, link.news_source, image_path))
 
                 db.commit()
