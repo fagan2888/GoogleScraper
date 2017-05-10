@@ -19,19 +19,32 @@ import requests
 # timer set to run every 60 minutes
 from apscheduler.schedulers.background import BackgroundScheduler
 
+# configuration
+import configparser
+
+# Load KEYS.config file
+config = ConfigParser.ConfigParser()
+config.read("keys.conf")
+
+# AWS Database information
+aws_username = config.get("AWSDatabaseConfig", "username")
+aws_password = config.get("AWSDatabaseConfig", "password")
+aws_host = config.get("AWSDatabaseConfig", "host")
+
+# Alchemy API key for text sentiment analysis
+alchemy_API = config.get("AlchemyConfig", "apikey")
 
 
 def text_stats():
 # 3000 API calls per day = 125 calls per hour
 # alchemy key and api endpoints:
-    apikey = '116253b1d06454f4eb18086999a9a375a371ece3' # ND key
-    #apikey = "3f9bbc00f9a0e6c2cc8adea331e76592b53a5464" # my temp key
+    apikey = alchemy_API
     urlsentiment_api = 'http://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment' # sentiment analysis of url content
 
 
-    db = pymysql.connect(user='merrillawsdb',
-                             passwd='WR3QZGVaoHqNXAF',
-                             host='awsdbinstance.cz5m3w6kwml8.us-east-1.rds.amazonaws.com',
+    db = pymysql.connect(user= aws_username,
+                             passwd= aws_password,
+                             host= aws_host,
                              port=3306,
                              database='google_scraper',
                              charset='utf8mb4')
@@ -39,7 +52,7 @@ def text_stats():
     cursor = db.cursor(pymysql.cursors.DictCursor)
 
     # fetch up to 1000 rows from the DB that are 'results' pages, and have not yet been analyzed
-    sql = "SELECT * from search_engine_results_TESTING WHERE link_type = 'results' AND content_HTML is NULL LIMIT 500"
+    sql = "SELECT * from search_engine_results WHERE link_type = 'results' AND content_HTML is NULL LIMIT 500"
     cursor.execute(sql)
 
     results = cursor.fetchall()
@@ -111,7 +124,6 @@ def text_stats():
         db.close()
 
 
-# # Taken from Uber gatherUberData.py
 # # Create a scheduler to trigger every N seconds
 # # http://apscheduler.readthedocs.org/en/3.0/userguide.html#code-examples
 scheduler = BackgroundScheduler()

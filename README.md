@@ -2,23 +2,30 @@
 
 ## This repo is copied from [here](https://github.com/NikolaiT/GoogleScraper) and adapted for our work at the Computational Journalism Lab
 This README has been edited to include our changes.
-Changes we made were:
+Changes we made are:
 ### Adding Google's main results page _sections_, including:
-* downloading images which appear in the image box in the top right portion of the page when you search known people.
-* Added the ability to collect "In the news" and then the newer "Top Stories" from Google's main Search Results page.
+* **"Image Box"** downloading images which appear in the image box in the top right portion of the page when you search known people.
+* **"Top Stories Box"** Added the ability to collect "In the news" and then the newer "Top Stories" from Google's main Search Results page.
 ### Adding database columns, including:
 * Image-related columns: `has_image`, `image_path`, `image_dims`, `image_height`, and `image_width`.
-* News-related columns: `has_image`, `news_date` and `news_source`. Google's "In the News" section has since been changed to "Top Stories". Therefore, we added a column `top_stories`. All these stories come with images, compared with "In the News" where only the first story had an image.
-* Added ability to save data to our own designated database. In our case, MySQL. GoogleScraper automatically creates its own sqlite3 database. To avoid
-taking up space populating two databases, this automatically created one is deleted each time the code scrapes the web.
-* Added text sentiment analysis currently powered by Alchemy sentiment API.
+* News-related columns: `has_image`, `news_date` and `news_source`. Google's "In the News" section has since been changed to "Top Stories". Therefore, we added a section in `/GoogleScraper/parsing.py` to find `top_stories` elements. The vast majority of these stories come with images, compared with "In the News" where only the first story had an image.
+* **MySQL Database** Added ability to save data to our own designated database. In our case, MySQL hosted on AWS. GoogleScraper automatically creates its own sqlite3 database. To avoid taking up space populating two databases, the sqlite3 database gets deleted each time the code scrapes the web.
+* **Sentiment Analysis** Added text sentiment analysis currently powered by Alchemy sentiment API. This has its own scheduler so it can be run on a different schedule from the main scraper.
+* **Config file** Added a configuration file `keys.conf` for AWS keys (username, password, instance) and alchemy API key.
+To use this version, we recommend you read the original README included below for details on configuration. In addition we
 
- link_type, serp_id,
 
+To use our version:
+* Install using the instruction in the original README below.
+* Create your own database with if you do not want to use the sqlite3 one automatically created.
+* Edit the `keys.conf` file to reflect your database details and your own Alchemy API key. Do not use strings.
+* Edit the `candidate_scraper.py` file where appropriate. Appropriate sections are commented with more details.
 
-To use our version
-____
-Original README ...
+* Run the scraper with `nohup python -u candidate_scraper.py > nohup.txt &`
+* Run text analysis with `nohup python -u text_analysis.py > nohup_text_analysis.txt &`
+
+________
+#Original README ...
 
 ## News
 

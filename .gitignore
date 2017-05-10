@@ -29,6 +29,10 @@ nohup.txt
 TestSelenium.py
 GoogleScraper_Schema.sql
 
+keys_CJL.conf
+
+*png
+
 .ipynb_checkpoints
 
 # PyCharm editor
