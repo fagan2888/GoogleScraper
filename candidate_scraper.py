@@ -29,13 +29,12 @@ import re
 from apscheduler.schedulers.background import BackgroundScheduler
 import time
 
-
 counter = 23
 
 keywords = [
-    'bernie sanders',
-    'hillary clinton',
-    'donald trump'
+    'marine le pen',
+    'angela merkel',
+    'emmanuel macron',
 ]
 
 # See in the config.cfg file for possible values
@@ -47,7 +46,7 @@ config = {
     'scrape_method': 'selenium',
     'do_caching': False,
     'sel_browser': 'phantomjs',
-    'log_level': 'INFO',
+    'log_level': 'DEBUG',  # INFO
     'search_type': 'normal',
     'clean_cache_files': False,
     'print_results': 'summarize',
@@ -85,7 +84,7 @@ def put_in_database():
     cur = db.cursor()
 
 
-    target_directory = './images/'
+    target_directory = './images_TESTING/'
     try:
         os.mkdir(target_directory)
     except FileExistsError:
@@ -96,7 +95,7 @@ def put_in_database():
         for serp in search.serps:
 
             # Create a new record into serp table
-            sql = "INSERT INTO serp (search_engine_name, scrape_method, requested_at, search_query) VALUES (%s, %s, %s, %s)"
+            sql = "INSERT INTO serp_TESTING (search_engine_name, scrape_method, requested_at, search_query) VALUES (%s, %s, %s, %s)"
             cur.execute(sql,(serp.search_engine_name, serp.scrape_method, serp.requested_at, serp.query))
 
             serp_id = cur.lastrowid  # This line can go before or after db.commit()
@@ -121,12 +120,13 @@ def put_in_database():
                     w = width.search(link.image_dims)
                     image_width = int(w.group(1))
 
+                    # IMAGE SAVE IF-LOOP
                     if counter % 24 == 0:
                         print("\nStarting image save if-loop...:   ")
                         baseURL = 'https://www.google.com'
                         #print("Creating imgURL ...   ")
                         imgURL = baseURL + link.link
-                        #print("Creating 'candidate' ...   \n", imgURL)
+                        print("Creating 'candidate' ...   \n", imgURL)
                         candidate = serp.query.replace(' ', '_')
                         print(candidate)
                         print("Creating candidate file name ....   ")
@@ -141,29 +141,34 @@ def put_in_database():
                         driver = webdriver.PhantomJS('./phantomjs', desired_capabilities=dcap)
                         driver.set_window_size(1020, 550)
                         driver.wait = WebDriverWait(driver, 5)
-                        driver.get(imgURL)
+                        try:
+                            driver.get(imgURL)
 
-                        element = driver.wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="irc_cc"]/div[2]/div[1]/div[2]/div[2]/a/img'))) # this is the current one.
-                        #element = driver.wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="irc_cc"]/div[3]/div[1]/div[2]/div[2]/a/img'))) # this is the old one.
-                        time.sleep(4)
-                        src = element.get_attribute('src')
-                        print("This is the 'src':   ", src)
-                        time.sleep(4)
+                        # CURENT_XPATH freqently changes, so keep an eye on this. If your images suddenly fail to download, this is where to check first.
+                            element = driver.wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="irc_cc"]/div[2]/div[1]/div[2]/div[2]/a/img'))) # this is the current one.
+                            time.sleep(4) #4
+                            src = element.get_attribute('src')
+                            print("This is the 'src':   ", src)
+                            time.sleep(4) #4
 
-                        current_directory = str(serp_id) + '/'
-                        path = os.path.join(target_directory, current_directory)
-                        if not os.path.exists(path):
-                            os.makedirs(path)
+                            current_directory = str(serp_id) + '/'
+                            path = os.path.join(target_directory, current_directory)
+                            if not os.path.exists(path):
+                                os.makedirs(path)
 
-                        image_path = path + imageFile
+                            image_path = path + imageFile
 
-                        with open(os.path.join(path,imageFile), 'wb') as q:
-                            # get image from the link
-                            res = requests.get(src)
-                            # write the image to file in chunks
-                            for chunk in res.iter_content(100000):
-                                q.write(chunk)
+                            with open(os.path.join(path,imageFile), 'wb') as q:
+                                # get image from the link
+                                res = requests.get(src)
+                                # write the image to file in chunks
+                                for chunk in res.iter_content(100000):
+                                    q.write(chunk)
 
+                        except Exception as e:
+                            driver.save_screenshot(imageFile + '.png')
+                            pass
+                            
                         driver.close()
                         driver.quit()
 
@@ -177,8 +182,8 @@ def put_in_database():
 
 
                 # Create a new record into search_engine_results table
-                sql = "INSERT INTO search_engine_results (link, title, snippet, visible_link, rank, link_type, serp_id, has_image, image_dims, image_height, image_width, news_date, news_source, image_path) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-                cur.execute(sql,(link.link, link.title, link.snippet, link.visible_link, link.rank, link.link_type, serp_id, link.has_image, link.image_dims, image_height, image_width, link.news_date, link.news_source, image_path))
+                sql = "INSERT INTO search_engine_results_TESTING (link, title, snippet, visible_link, rank, link_type, serp_id, has_image, image_dims, image_height, image_width, news_date, news_source, image_path, top_stories) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+                cur.execute(sql,(link.link, link.title, link.snippet, link.visible_link, link.rank, link.link_type, serp_id, link.has_image, link.image_dims, image_height, image_width, link.news_date, link.news_source, image_path, link.top_stories))
 
                 db.commit()
 
@@ -190,7 +195,7 @@ def put_in_database():
 # # Create a scheduler to trigger every N seconds
 # # http://apscheduler.readthedocs.org/en/3.0/userguide.html#code-examples
 scheduler = BackgroundScheduler()
-scheduler.add_job(put_in_database, 'interval', seconds =3600) # 1 hour
+scheduler.add_job(put_in_database, 'interval', seconds = 300) #  3600 = 1 hour
 scheduler.start()
 
 while True:

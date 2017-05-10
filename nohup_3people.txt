@@ -1,0 +1,687 @@
+
+SQLite database Removed!
+The current count is:  24
+2017-05-05 21:06:54,411 - GoogleScraper.core - INFO - Going to scrape 3 keywords with 1 proxies by using 1 threads.
+GoogleSelScrape
+creating a new SelScraper thread instance
+2017-05-05 21:06:54,412 - GoogleScraper.scraping - INFO - [+] SelScrape[localhost][search-type:normal][https://www.google.com/search?] using search engine "google". Num keywords=3, num pages for keyword=[1]
+Run the SelScraper
+set xvfb disply
+2017-05-05 21:06:55,436 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:06:55,452 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:55,453 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/window/current/size {"width": 1200, "windowHandle": "current", "height": 550, "sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598"}
+2017-05-05 21:06:55,456 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:55,456 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/window/current/position {"x": 400, "sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "windowHandle": "current", "y": 0}
+2017-05-05 21:06:55,459 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:55,459 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/url {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "url": "https://www.google.com/search?"}
+2017-05-05 21:06:57,453 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+start `search` function to fill in search engine:  ...
+
+2017-05-05 21:06:57,454 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "name", "value": "q"}
+2017-05-05 21:06:57,465 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:57,465 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817464/clear {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817464"}
+2017-05-05 21:06:57,478 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:57,732 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817464/value {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817464", "value": ["v", "l", "a", "d", "i", "m", "i", "r", " ", "p", "u", "t", "i", "n", "\ue007"]}
+2017-05-05 21:06:57,792 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,793 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "vladimir putin" with [1] pages, slept 2 seconds before scraping. 1/3 already scraped.
+2017-05-05 21:06:59,794 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:06:59,804 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,805 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817465/text {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817465"}
+2017-05-05 21:06:59,815 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,815 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/source {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598"}
+2017-05-05 21:06:59,846 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,846 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/execute {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:06:59,876 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [21] link results for query "vladimir putin">
+2017-05-05 21:06:59,932 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#pnnext"}
+[92m1/3 keywords processed.[0m2017-05-05 21:06:59,942 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,942 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817466/displayed {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817466"}
+2017-05-05 21:06:59,952 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,952 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817466/enabled {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817466"}
+2017-05-05 21:06:59,959 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,959 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:06:59,963 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,963 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817466/attribute/href {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817466", "name": "href"}
+2017-05-05 21:06:59,970 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:06:59,970 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817466/click {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817466"}
+2017-05-05 21:07:00,012 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:00,012 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "name", "value": "q"}
+2017-05-05 21:07:00,019 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:00,019 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817464/clear {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817464"}
+2017-05-05 21:07:00,027 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:00,278 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817464/value {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817464", "value": ["a", "n", "g", "e", "l", "a", " ", "m", "e", "r", "k", "e", "l", "\ue007"]}
+2017-05-05 21:07:00,328 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,329 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "angela merkel" with [1] pages, slept 2 seconds before scraping. 2/3 already scraped.
+2017-05-05 21:07:02,329 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:07:02,336 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,336 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817467/text {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817467"}
+2017-05-05 21:07:02,347 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,347 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/source {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598"}
+2017-05-05 21:07:02,378 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,379 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/execute {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:07:02,406 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [23] link results for query "angela merkel">
+2017-05-05 21:07:02,462 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#pnnext"}
+[92m2/3 keywords processed.[0m2017-05-05 21:07:02,469 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,469 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817468/displayed {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817468"}
+2017-05-05 21:07:02,480 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,481 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817468/enabled {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817468"}
+2017-05-05 21:07:02,492 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,492 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:07:02,498 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,498 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817468/attribute/href {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817468", "name": "href"}
+2017-05-05 21:07:02,507 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,507 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817468/click {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817468"}
+2017-05-05 21:07:02,559 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,559 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "name", "value": "q"}
+2017-05-05 21:07:02,566 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,567 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817464/clear {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817464"}
+2017-05-05 21:07:02,574 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:02,826 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817464/value {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817464", "value": ["d", "o", "n", "a", "l", "d", " ", "t", "r", "u", "m", "p", "\ue007"]}
+2017-05-05 21:07:02,866 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:04,868 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "donald trump" with [1] pages, slept 2 seconds before scraping. 3/3 already scraped.
+2017-05-05 21:07:04,868 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:07:04,873 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:04,873 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817469/text {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817469"}
+2017-05-05 21:07:04,883 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:04,883 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/source {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598"}
+2017-05-05 21:07:04,932 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:04,932 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/execute {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:07:04,964 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [21] link results for query "donald trump">
+2017-05-05 21:07:05,015 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#pnnext"}
+[92m3/3 keywords processed.[0m2017-05-05 21:07:05,021 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:05,021 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817470/displayed {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817470"}
+2017-05-05 21:07:05,034 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:05,034 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817470/enabled {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817470"}
+2017-05-05 21:07:05,044 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:05,044 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:07:05,050 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:05,050 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817470/attribute/href {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817470", "name": "href"}
+2017-05-05 21:07:05,060 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:05,060 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598/element/:wdc:1494032817470/click {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598", "id": ":wdc:1494032817470"}
+2017-05-05 21:07:05,093 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:05,093 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:61776/wd/hub/session/4bfafd80-31f8-11e7-86d9-89b5eb6c5598 {"sessionId": "4bfafd80-31f8-11e7-86d9-89b5eb6c5598"}
+2017-05-05 21:07:05,097 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+serp_id is:   1299
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/imgres?imgurl=http://cdn.images.express.co.uk/img/dynamic/galleries/x701/73375.jpg&imgrefurl=http://www.express.co.uk/pictures/galleries/3216/Vladimir-Putin-Russian-president-politician-pictures/Russian-President-Vladimir-Putin-leaves-the-Elysee-Palace-73375&h=701&w=898&tbnid=topWB-ZEnBib0M:&tbnh=156&tbnw=199&usg=__4sZznnzQLoIDFpgrVYkz9SgWc8M=&vet=1&docid=T0lm8-NxLPjnMM&itg=1&sa=X&ved=0ahUKEwip8JP7idrTAhVI7iYKHUC9DVYQ_B0IhwEwDw
+vladimir_putin
+Creating candidate file name ....   
+1299_15_vladimir_putin_1.jpg
+2017-05-05 21:07:08,012 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61878/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:07:08,023 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:08,024 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61878/wd/hub/session/53792c30-31f8-11e7-8e96-f3c9f28d5e87/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "53792c30-31f8-11e7-8e96-f3c9f28d5e87"}
+2017-05-05 21:07:08,027 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:08,027 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61878/wd/hub/session/53792c30-31f8-11e7-8e96-f3c9f28d5e87/url {"sessionId": "53792c30-31f8-11e7-8e96-f3c9f28d5e87", "url": "https://www.google.com/imgres?imgurl=http://cdn.images.express.co.uk/img/dynamic/galleries/x701/73375.jpg&imgrefurl=http://www.express.co.uk/pictures/galleries/3216/Vladimir-Putin-Russian-president-politician-pictures/Russian-President-Vladimir-Putin-leaves-the-Elysee-Palace-73375&h=701&w=898&tbnid=topWB-ZEnBib0M:&tbnh=156&tbnw=199&usg=__4sZznnzQLoIDFpgrVYkz9SgWc8M=&vet=1&docid=T0lm8-NxLPjnMM&itg=1&sa=X&ved=0ahUKEwip8JP7idrTAhVI7iYKHUC9DVYQ_B0IhwEwDw"}
+2017-05-05 21:07:10,192 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:10,192 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61878/wd/hub/session/53792c30-31f8-11e7-8e96-f3c9f28d5e87/element {"sessionId": "53792c30-31f8-11e7-8e96-f3c9f28d5e87", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:07:10,203 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:14,206 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61878/wd/hub/session/53792c30-31f8-11e7-8e96-f3c9f28d5e87/element/:wdc:1494032830202/attribute/src {"sessionId": "53792c30-31f8-11e7-8e96-f3c9f28d5e87", "id": ":wdc:1494032830202", "name": "src"}
+2017-05-05 21:07:14,218 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    http://cdn.images.express.co.uk/img/dynamic/galleries/x701/73375.jpg
+2017-05-05 21:07:18,232 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): cdn.images.express.co.uk
+2017-05-05 21:07:18,697 - requests.packages.urllib3.connectionpool - DEBUG - "GET /img/dynamic/galleries/x701/73375.jpg HTTP/1.1" 200 96423
+2017-05-05 21:07:19,137 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:61878/wd/hub/session/53792c30-31f8-11e7-8e96-f3c9f28d5e87/window {"sessionId": "53792c30-31f8-11e7-8e96-f3c9f28d5e87"}
+2017-05-05 21:07:19,141 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:19,142 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:61878/wd/hub/session/53792c30-31f8-11e7-8e96-f3c9f28d5e87 {"sessionId": "53792c30-31f8-11e7-8e96-f3c9f28d5e87"}
+2017-05-05 21:07:19,147 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=qFUYMU1xv9lDzM%253A%253B31fDIBOoZJpqRM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FVladimir_Putin&source=iu&pf=m&fir=qFUYMU1xv9lDzM%253A%252C31fDIBOoZJpqRM%252C_&usg=__0E6nwowyqQpHLVKXY8nVle2cbcE%3D
+vladimir_putin
+Creating candidate file name ....   
+1299_16_vladimir_putin_2.jpg
+2017-05-05 21:07:20,321 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61944/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:07:20,333 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:20,333 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61944/wd/hub/session/5acf6080-31f8-11e7-b6e5-57d6c86edbab/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "5acf6080-31f8-11e7-b6e5-57d6c86edbab"}
+2017-05-05 21:07:20,339 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:20,339 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61944/wd/hub/session/5acf6080-31f8-11e7-b6e5-57d6c86edbab/url {"sessionId": "5acf6080-31f8-11e7-b6e5-57d6c86edbab", "url": "https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=qFUYMU1xv9lDzM%253A%253B31fDIBOoZJpqRM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FVladimir_Putin&source=iu&pf=m&fir=qFUYMU1xv9lDzM%253A%252C31fDIBOoZJpqRM%252C_&usg=__0E6nwowyqQpHLVKXY8nVle2cbcE%3D"}
+2017-05-05 21:07:24,052 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:24,052 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:61944/wd/hub/session/5acf6080-31f8-11e7-b6e5-57d6c86edbab/element {"sessionId": "5acf6080-31f8-11e7-b6e5-57d6c86edbab", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:07:24,065 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:28,068 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:61944/wd/hub/session/5acf6080-31f8-11e7-b6e5-57d6c86edbab/element/:wdc:1494032844064/attribute/src {"sessionId": "5acf6080-31f8-11e7-b6e5-57d6c86edbab", "id": ":wdc:1494032844064", "name": "src"}
+2017-05-05 21:07:28,080 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Putin_with_flag_of_Russia.jpg/220px-Putin_with_flag_of_Russia.jpg
+2017-05-05 21:07:32,089 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): upload.wikimedia.org
+2017-05-05 21:07:32,498 - requests.packages.urllib3.connectionpool - DEBUG - "GET /wikipedia/commons/thumb/8/86/Putin_with_flag_of_Russia.jpg/220px-Putin_with_flag_of_Russia.jpg HTTP/1.1" 200 13831
+2017-05-05 21:07:32,516 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:61944/wd/hub/session/5acf6080-31f8-11e7-b6e5-57d6c86edbab/window {"sessionId": "5acf6080-31f8-11e7-b6e5-57d6c86edbab"}
+2017-05-05 21:07:32,519 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:32,519 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:61944/wd/hub/session/5acf6080-31f8-11e7-b6e5-57d6c86edbab {"sessionId": "5acf6080-31f8-11e7-b6e5-57d6c86edbab"}
+2017-05-05 21:07:32,529 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=2yWya8wc7GRINM%253A%253BOjXXahfnl0Rs_M%253Bhttp%25253A%25252F%25252Fwww.independent.co.uk%25252Fnews%25252Fworld%25252Fmiddle-east%25252Fvladimir-putin-says-russia-will-fight-for-the-right-of-palestinians-to-their-own-state-10141902.html&source=iu&pf=m&fir=2yWya8wc7GRINM%253A%252COjXXahfnl0Rs_M%252C_&usg=__bCVrqVcn8oLp4j6rNX3F5osp8lk%3D
+vladimir_putin
+Creating candidate file name ....   
+1299_17_vladimir_putin_3.jpg
+2017-05-05 21:07:33,721 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62029/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:07:33,733 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:33,733 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62029/wd/hub/session/62cc0e00-31f8-11e7-869a-3f6bf577c6fc/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "62cc0e00-31f8-11e7-869a-3f6bf577c6fc"}
+2017-05-05 21:07:33,737 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:33,737 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62029/wd/hub/session/62cc0e00-31f8-11e7-869a-3f6bf577c6fc/url {"sessionId": "62cc0e00-31f8-11e7-869a-3f6bf577c6fc", "url": "https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=2yWya8wc7GRINM%253A%253BOjXXahfnl0Rs_M%253Bhttp%25253A%25252F%25252Fwww.independent.co.uk%25252Fnews%25252Fworld%25252Fmiddle-east%25252Fvladimir-putin-says-russia-will-fight-for-the-right-of-palestinians-to-their-own-state-10141902.html&source=iu&pf=m&fir=2yWya8wc7GRINM%253A%252COjXXahfnl0Rs_M%252C_&usg=__bCVrqVcn8oLp4j6rNX3F5osp8lk%3D"}
+2017-05-05 21:07:37,426 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:37,427 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62029/wd/hub/session/62cc0e00-31f8-11e7-869a-3f6bf577c6fc/element {"sessionId": "62cc0e00-31f8-11e7-869a-3f6bf577c6fc", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:07:37,437 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:41,440 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62029/wd/hub/session/62cc0e00-31f8-11e7-869a-3f6bf577c6fc/element/:wdc:1494032857436/attribute/src {"sessionId": "62cc0e00-31f8-11e7-869a-3f6bf577c6fc", "id": ":wdc:1494032857436", "name": "src"}
+2017-05-05 21:07:41,448 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/03/29/13/vladimir-putin-closeup.jpg
+2017-05-05 21:07:45,455 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): static.independent.co.uk
+2017-05-05 21:07:45,715 - requests.packages.urllib3.connectionpool - DEBUG - "GET /s3fs-public/thumbnails/image/2015/03/29/13/vladimir-putin-closeup.jpg HTTP/1.1" 200 511589
+2017-05-05 21:07:46,932 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62029/wd/hub/session/62cc0e00-31f8-11e7-869a-3f6bf577c6fc/window {"sessionId": "62cc0e00-31f8-11e7-869a-3f6bf577c6fc"}
+2017-05-05 21:07:46,934 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:46,934 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62029/wd/hub/session/62cc0e00-31f8-11e7-869a-3f6bf577c6fc {"sessionId": "62cc0e00-31f8-11e7-869a-3f6bf577c6fc"}
+2017-05-05 21:07:46,946 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=qklSNDMEdlq8IM%253A%253BxySDThwg_qGn6M%253Bhttp%25253A%25252F%25252Fen.kremlin.ru%25252Fpress%25252Fphoto&source=iu&pf=m&fir=qklSNDMEdlq8IM%253A%252CxySDThwg_qGn6M%252C_&usg=__36zEcZIowfvqb8ovnat5IFlohO4%3D
+vladimir_putin
+Creating candidate file name ....   
+1299_18_vladimir_putin_4.jpg
+2017-05-05 21:07:48,011 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62121/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:07:48,029 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:48,030 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62121/wd/hub/session/6b50b030-31f8-11e7-819d-f789c7cada76/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "6b50b030-31f8-11e7-819d-f789c7cada76"}
+2017-05-05 21:07:48,034 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:48,034 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62121/wd/hub/session/6b50b030-31f8-11e7-819d-f789c7cada76/url {"sessionId": "6b50b030-31f8-11e7-819d-f789c7cada76", "url": "https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=qklSNDMEdlq8IM%253A%253BxySDThwg_qGn6M%253Bhttp%25253A%25252F%25252Fen.kremlin.ru%25252Fpress%25252Fphoto&source=iu&pf=m&fir=qklSNDMEdlq8IM%253A%252CxySDThwg_qGn6M%252C_&usg=__36zEcZIowfvqb8ovnat5IFlohO4%3D"}
+2017-05-05 21:07:51,726 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:51,726 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62121/wd/hub/session/6b50b030-31f8-11e7-819d-f789c7cada76/element {"sessionId": "6b50b030-31f8-11e7-819d-f789c7cada76", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:07:51,737 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:07:55,740 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62121/wd/hub/session/6b50b030-31f8-11e7-819d-f789c7cada76/element/:wdc:1494032871736/attribute/src {"sessionId": "6b50b030-31f8-11e7-819d-f789c7cada76", "id": ":wdc:1494032871736", "name": "src"}
+2017-05-05 21:07:55,752 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    https://upload.wikimedia.org/wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg
+2017-05-05 21:07:59,761 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): upload.wikimedia.org
+2017-05-05 21:08:00,183 - requests.packages.urllib3.connectionpool - DEBUG - "GET /wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg HTTP/1.1" 200 933593
+2017-05-05 21:08:01,189 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62121/wd/hub/session/6b50b030-31f8-11e7-819d-f789c7cada76/window {"sessionId": "6b50b030-31f8-11e7-819d-f789c7cada76"}
+2017-05-05 21:08:01,192 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:01,192 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62121/wd/hub/session/6b50b030-31f8-11e7-819d-f789c7cada76 {"sessionId": "6b50b030-31f8-11e7-819d-f789c7cada76"}
+2017-05-05 21:08:01,205 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=yx8dnMeSC6obuM%253A%253BcbEDJ3Djfud9kM%253Bhttp%25253A%25252F%25252Fanguerde.com%25252FTTF-395248-vladimir-putin.html&source=iu&pf=m&fir=yx8dnMeSC6obuM%253A%252CcbEDJ3Djfud9kM%252C_&usg=__Iptxai7LTp0EQ2LnvmL8qtGO664%3D
+vladimir_putin
+Creating candidate file name ....   
+1299_19_vladimir_putin_5.jpg
+2017-05-05 21:08:02,268 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62219/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:08:02,280 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:02,280 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62219/wd/hub/session/73cfd420-31f8-11e7-9f5f-81be7662bbb4/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "73cfd420-31f8-11e7-9f5f-81be7662bbb4"}
+2017-05-05 21:08:02,284 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:02,284 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62219/wd/hub/session/73cfd420-31f8-11e7-9f5f-81be7662bbb4/url {"sessionId": "73cfd420-31f8-11e7-9f5f-81be7662bbb4", "url": "https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=yx8dnMeSC6obuM%253A%253BcbEDJ3Djfud9kM%253Bhttp%25253A%25252F%25252Fanguerde.com%25252FTTF-395248-vladimir-putin.html&source=iu&pf=m&fir=yx8dnMeSC6obuM%253A%252CcbEDJ3Djfud9kM%252C_&usg=__Iptxai7LTp0EQ2LnvmL8qtGO664%3D"}
+2017-05-05 21:08:04,909 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:04,910 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62219/wd/hub/session/73cfd420-31f8-11e7-9f5f-81be7662bbb4/element {"sessionId": "73cfd420-31f8-11e7-9f5f-81be7662bbb4", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:08:04,924 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:08,924 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62219/wd/hub/session/73cfd420-31f8-11e7-9f5f-81be7662bbb4/element/:wdc:1494032884923/attribute/src {"sessionId": "73cfd420-31f8-11e7-9f5f-81be7662bbb4", "id": ":wdc:1494032884923", "name": "src"}
+2017-05-05 21:08:10,047 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:10,049 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62219/wd/hub/session/73cfd420-31f8-11e7-9f5f-81be7662bbb4/screenshot {"sessionId": "73cfd420-31f8-11e7-9f5f-81be7662bbb4"}
+2017-05-05 21:08:10,872 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:10,918 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): upload.wikimedia.org
+2017-05-05 21:08:10,993 - requests.packages.urllib3.connectionpool - DEBUG - "GET /wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg HTTP/1.1" 200 933593
+2017-05-05 21:08:11,942 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62219/wd/hub/session/73cfd420-31f8-11e7-9f5f-81be7662bbb4/window {"sessionId": "73cfd420-31f8-11e7-9f5f-81be7662bbb4"}
+2017-05-05 21:08:11,945 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:11,945 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62219/wd/hub/session/73cfd420-31f8-11e7-9f5f-81be7662bbb4 {"sessionId": "73cfd420-31f8-11e7-9f5f-81be7662bbb4"}
+2017-05-05 21:08:11,965 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=FCTw-xUlCav5UM%253A%253BzdmCLnHRdFdLcM%253Bhttp%25253A%25252F%25252Fwww.rightwingwatch.org%25252Fpost%25252Fpro-family-leaders-in-russia-want-to-decriminalize-domestic-battery%25252F&source=iu&pf=m&fir=FCTw-xUlCav5UM%253A%252CzdmCLnHRdFdLcM%252C_&usg=__PqI24HhgAh0TuKu5CLHtlR8y7d4%3D
+vladimir_putin
+Creating candidate file name ....   
+1299_20_vladimir_putin_6.jpg
+2017-05-05 21:08:14,035 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62309/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:08:14,052 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:14,052 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62309/wd/hub/session/7ad43ef0-31f8-11e7-ac08-f59cd4850ebb/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "7ad43ef0-31f8-11e7-ac08-f59cd4850ebb"}
+2017-05-05 21:08:14,056 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:14,057 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62309/wd/hub/session/7ad43ef0-31f8-11e7-ac08-f59cd4850ebb/url {"sessionId": "7ad43ef0-31f8-11e7-ac08-f59cd4850ebb", "url": "https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=FCTw-xUlCav5UM%253A%253BzdmCLnHRdFdLcM%253Bhttp%25253A%25252F%25252Fwww.rightwingwatch.org%25252Fpost%25252Fpro-family-leaders-in-russia-want-to-decriminalize-domestic-battery%25252F&source=iu&pf=m&fir=FCTw-xUlCav5UM%253A%252CzdmCLnHRdFdLcM%252C_&usg=__PqI24HhgAh0TuKu5CLHtlR8y7d4%3D"}
+2017-05-05 21:08:17,217 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:17,217 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62309/wd/hub/session/7ad43ef0-31f8-11e7-ac08-f59cd4850ebb/element {"sessionId": "7ad43ef0-31f8-11e7-ac08-f59cd4850ebb", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:08:17,235 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:21,236 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62309/wd/hub/session/7ad43ef0-31f8-11e7-ac08-f59cd4850ebb/element/:wdc:1494032897233/attribute/src {"sessionId": "7ad43ef0-31f8-11e7-ac08-f59cd4850ebb", "id": ":wdc:1494032897233", "name": "src"}
+2017-05-05 21:08:21,248 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    http://files.rightwingwatch.org/uploads/a_story_images/vladimir-putin_416x416.jpg
+2017-05-05 21:08:25,256 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): files.rightwingwatch.org
+2017-05-05 21:08:25,507 - requests.packages.urllib3.connectionpool - DEBUG - "GET /uploads/a_story_images/vladimir-putin_416x416.jpg HTTP/1.1" 200 34885
+2017-05-05 21:08:25,665 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62309/wd/hub/session/7ad43ef0-31f8-11e7-ac08-f59cd4850ebb/window {"sessionId": "7ad43ef0-31f8-11e7-ac08-f59cd4850ebb"}
+2017-05-05 21:08:25,667 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:25,668 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62309/wd/hub/session/7ad43ef0-31f8-11e7-ac08-f59cd4850ebb {"sessionId": "7ad43ef0-31f8-11e7-ac08-f59cd4850ebb"}
+2017-05-05 21:08:25,678 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=2q0Pqn8HbL7HvM%253A%253BP7QTSla52mehIM%253Bhttp%25253A%25252F%25252Funisci24.com%25252F238960.html&source=iu&pf=m&fir=2q0Pqn8HbL7HvM%253A%252CP7QTSla52mehIM%252C_&usg=__7tDS2YI_GIt440n9-g3Sp2QCubM%3D
+vladimir_putin
+Creating candidate file name ....   
+1299_21_vladimir_putin_7.jpg
+2017-05-05 21:08:26,978 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62417/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:08:26,989 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:26,990 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62417/wd/hub/session/828a6d90-31f8-11e7-a77c-c57a69b3e18d/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "828a6d90-31f8-11e7-a77c-c57a69b3e18d"}
+2017-05-05 21:08:26,993 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:26,994 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62417/wd/hub/session/828a6d90-31f8-11e7-a77c-c57a69b3e18d/url {"sessionId": "828a6d90-31f8-11e7-a77c-c57a69b3e18d", "url": "https://www.google.com/search?q=vladimir+putin&biw=1200&bih=550&site=webhp&tbm=isch&imgil=2q0Pqn8HbL7HvM%253A%253BP7QTSla52mehIM%253Bhttp%25253A%25252F%25252Funisci24.com%25252F238960.html&source=iu&pf=m&fir=2q0Pqn8HbL7HvM%253A%252CP7QTSla52mehIM%252C_&usg=__7tDS2YI_GIt440n9-g3Sp2QCubM%3D"}
+2017-05-05 21:08:30,074 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:30,075 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62417/wd/hub/session/828a6d90-31f8-11e7-a77c-c57a69b3e18d/element {"sessionId": "828a6d90-31f8-11e7-a77c-c57a69b3e18d", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:08:31,218 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:31,730 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62417/wd/hub/session/828a6d90-31f8-11e7-a77c-c57a69b3e18d/element {"sessionId": "828a6d90-31f8-11e7-a77c-c57a69b3e18d", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:08:31,735 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:35,738 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62417/wd/hub/session/828a6d90-31f8-11e7-a77c-c57a69b3e18d/element/:wdc:1494032911735/attribute/src {"sessionId": "828a6d90-31f8-11e7-a77c-c57a69b3e18d", "id": ":wdc:1494032911735", "name": "src"}
+2017-05-05 21:08:35,748 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    http://resources3.news.com.au/images/2014/03/29/1226868/348291-245c9d42-b6cc-11e3-9942-d7dbb3111cd3.jpg
+2017-05-05 21:08:39,752 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): resources3.news.com.au
+2017-05-05 21:08:39,908 - requests.packages.urllib3.connectionpool - DEBUG - "GET /images/2014/03/29/1226868/348291-245c9d42-b6cc-11e3-9942-d7dbb3111cd3.jpg HTTP/1.1" 200 26843
+2017-05-05 21:08:39,910 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62417/wd/hub/session/828a6d90-31f8-11e7-a77c-c57a69b3e18d/window {"sessionId": "828a6d90-31f8-11e7-a77c-c57a69b3e18d"}
+2017-05-05 21:08:39,912 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:39,913 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62417/wd/hub/session/828a6d90-31f8-11e7-a77c-c57a69b3e18d {"sessionId": "828a6d90-31f8-11e7-a77c-c57a69b3e18d"}
+2017-05-05 21:08:39,924 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+serp_id is:   1300
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Angela_Merkel_%25282008%2529.jpg/220px-Angela_Merkel_%25282008%2529.jpg&imgrefurl=https://en.wikipedia.org/wiki/Angela_Merkel&h=165&w=220&tbnid=HIca_gHpUL9WLM:&tbnh=132&tbnw=176&usg=__GUgv_cqclj_nr43Qj2Zlt4bzSg8=&vet=1&docid=Rp3V-2mvMO7LJM&itg=1&sa=X&ved=0ahUKEwiP-qf8idrTAhVFMSYKHeuwAo4Q_B0IgQEwDg
+angela_merkel
+Creating candidate file name ....   
+1300_36_angela_merkel_1.jpg
+2017-05-05 21:08:42,145 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62514/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:08:42,161 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:42,162 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62514/wd/hub/session/8b957dd0-31f8-11e7-85ef-21c0756dbc55/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "8b957dd0-31f8-11e7-85ef-21c0756dbc55"}
+2017-05-05 21:08:42,165 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:42,166 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62514/wd/hub/session/8b957dd0-31f8-11e7-85ef-21c0756dbc55/url {"sessionId": "8b957dd0-31f8-11e7-85ef-21c0756dbc55", "url": "https://www.google.com/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Angela_Merkel_%25282008%2529.jpg/220px-Angela_Merkel_%25282008%2529.jpg&imgrefurl=https://en.wikipedia.org/wiki/Angela_Merkel&h=165&w=220&tbnid=HIca_gHpUL9WLM:&tbnh=132&tbnw=176&usg=__GUgv_cqclj_nr43Qj2Zlt4bzSg8=&vet=1&docid=Rp3V-2mvMO7LJM&itg=1&sa=X&ved=0ahUKEwiP-qf8idrTAhVFMSYKHeuwAo4Q_B0IgQEwDg"}
+2017-05-05 21:08:43,944 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:43,944 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62514/wd/hub/session/8b957dd0-31f8-11e7-85ef-21c0756dbc55/element {"sessionId": "8b957dd0-31f8-11e7-85ef-21c0756dbc55", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:08:43,956 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:47,961 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62514/wd/hub/session/8b957dd0-31f8-11e7-85ef-21c0756dbc55/element/:wdc:1494032923955/attribute/src {"sessionId": "8b957dd0-31f8-11e7-85ef-21c0756dbc55", "id": ":wdc:1494032923955", "name": "src"}
+2017-05-05 21:08:47,973 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Angela_Merkel_%282008%29.jpg/220px-Angela_Merkel_%282008%29.jpg
+2017-05-05 21:08:51,982 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): upload.wikimedia.org
+2017-05-05 21:08:52,077 - requests.packages.urllib3.connectionpool - DEBUG - "GET /wikipedia/commons/thumb/f/fd/Angela_Merkel_%282008%29.jpg/220px-Angela_Merkel_%282008%29.jpg HTTP/1.1" 200 9262
+2017-05-05 21:08:52,093 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62514/wd/hub/session/8b957dd0-31f8-11e7-85ef-21c0756dbc55/window {"sessionId": "8b957dd0-31f8-11e7-85ef-21c0756dbc55"}
+2017-05-05 21:08:52,095 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:52,096 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62514/wd/hub/session/8b957dd0-31f8-11e7-85ef-21c0756dbc55 {"sessionId": "8b957dd0-31f8-11e7-85ef-21c0756dbc55"}
+2017-05-05 21:08:52,100 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=nGMwsRRpuTMAiM%253A%253BeZYdEzTJ5KC17M%253Bhttps%25253A%25252F%25252Fwww.bundeskanzlerin.de%25252FWebs%25252FBKin%25252FEN%25252FAngelaMerkel%25252FProfile%25252Fprofile_node.html&source=iu&pf=m&fir=nGMwsRRpuTMAiM%253A%252CeZYdEzTJ5KC17M%252C_&usg=__-z_GvMGqvtQ8bJuuKf_IzRQzQ7Q%3D
+angela_merkel
+Creating candidate file name ....   
+1300_37_angela_merkel_2.jpg
+2017-05-05 21:08:53,161 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62580/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:08:53,174 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:53,175 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62580/wd/hub/session/9225f120-31f8-11e7-a5bb-b1e9972ccbe1/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "9225f120-31f8-11e7-a5bb-b1e9972ccbe1"}
+2017-05-05 21:08:53,179 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:53,179 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62580/wd/hub/session/9225f120-31f8-11e7-a5bb-b1e9972ccbe1/url {"sessionId": "9225f120-31f8-11e7-a5bb-b1e9972ccbe1", "url": "https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=nGMwsRRpuTMAiM%253A%253BeZYdEzTJ5KC17M%253Bhttps%25253A%25252F%25252Fwww.bundeskanzlerin.de%25252FWebs%25252FBKin%25252FEN%25252FAngelaMerkel%25252FProfile%25252Fprofile_node.html&source=iu&pf=m&fir=nGMwsRRpuTMAiM%253A%252CeZYdEzTJ5KC17M%252C_&usg=__-z_GvMGqvtQ8bJuuKf_IzRQzQ7Q%3D"}
+2017-05-05 21:08:56,554 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:08:56,554 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62580/wd/hub/session/9225f120-31f8-11e7-a5bb-b1e9972ccbe1/element {"sessionId": "9225f120-31f8-11e7-a5bb-b1e9972ccbe1", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:08:56,565 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:00,570 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62580/wd/hub/session/9225f120-31f8-11e7-a5bb-b1e9972ccbe1/element/:wdc:1494032936564/attribute/src {"sessionId": "9225f120-31f8-11e7-a5bb-b1e9972ccbe1", "id": ":wdc:1494032936564", "name": "src"}
+2017-05-05 21:09:01,445 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:01,448 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62580/wd/hub/session/9225f120-31f8-11e7-a5bb-b1e9972ccbe1/screenshot {"sessionId": "9225f120-31f8-11e7-a5bb-b1e9972ccbe1"}
+2017-05-05 21:09:02,197 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:02,228 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): upload.wikimedia.org
+2017-05-05 21:09:02,324 - requests.packages.urllib3.connectionpool - DEBUG - "GET /wikipedia/commons/thumb/f/fd/Angela_Merkel_%282008%29.jpg/220px-Angela_Merkel_%282008%29.jpg HTTP/1.1" 200 9262
+2017-05-05 21:09:02,342 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62580/wd/hub/session/9225f120-31f8-11e7-a5bb-b1e9972ccbe1/window {"sessionId": "9225f120-31f8-11e7-a5bb-b1e9972ccbe1"}
+2017-05-05 21:09:02,346 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:02,346 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62580/wd/hub/session/9225f120-31f8-11e7-a5bb-b1e9972ccbe1 {"sessionId": "9225f120-31f8-11e7-a5bb-b1e9972ccbe1"}
+2017-05-05 21:09:02,356 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=rzC8ZNUDBTnCbM%253A%253BxQ_lI52I66JXBM%253Bhttps%25253A%25252F%25252Fwww.bundeskanzlerin.de%25252FWebs%25252FBKin%25252FEN%25252FAngelaMerkel%25252FBiography%25252Fbiography_node.html&source=iu&pf=m&fir=rzC8ZNUDBTnCbM%253A%252CxQ_lI52I66JXBM%252C_&usg=__tpzhgDTYAR-Q2invV0VkHnl0gGE%3D
+angela_merkel
+Creating candidate file name ....   
+1300_38_angela_merkel_3.jpg
+2017-05-05 21:09:03,434 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62657/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:09:03,445 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:03,446 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62657/wd/hub/session/98452c10-31f8-11e7-a866-7ded89d69e86/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "98452c10-31f8-11e7-a866-7ded89d69e86"}
+2017-05-05 21:09:03,449 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:03,449 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62657/wd/hub/session/98452c10-31f8-11e7-a866-7ded89d69e86/url {"sessionId": "98452c10-31f8-11e7-a866-7ded89d69e86", "url": "https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=rzC8ZNUDBTnCbM%253A%253BxQ_lI52I66JXBM%253Bhttps%25253A%25252F%25252Fwww.bundeskanzlerin.de%25252FWebs%25252FBKin%25252FEN%25252FAngelaMerkel%25252FBiography%25252Fbiography_node.html&source=iu&pf=m&fir=rzC8ZNUDBTnCbM%253A%252CxQ_lI52I66JXBM%252C_&usg=__tpzhgDTYAR-Q2invV0VkHnl0gGE%3D"}
+2017-05-05 21:09:07,166 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:07,166 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62657/wd/hub/session/98452c10-31f8-11e7-a866-7ded89d69e86/element {"sessionId": "98452c10-31f8-11e7-a866-7ded89d69e86", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:09:07,176 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:11,180 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62657/wd/hub/session/98452c10-31f8-11e7-a866-7ded89d69e86/element/:wdc:1494032947175/attribute/src {"sessionId": "98452c10-31f8-11e7-a866-7ded89d69e86", "id": ":wdc:1494032947175", "name": "src"}
+2017-05-05 21:09:11,192 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    https://www.bundeskanzlerin.de/Webs/BKin/DE/AngelaMerkel/Biografie/bundeskanzlerin_angela_merkel.jpg?__blob=poster&v=5
+2017-05-05 21:09:15,199 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): www.bundeskanzlerin.de
+2017-05-05 21:09:16,150 - requests.packages.urllib3.connectionpool - DEBUG - "GET /Webs/BKin/DE/AngelaMerkel/Biografie/bundeskanzlerin_angela_merkel.jpg?__blob=poster&v=5 HTTP/1.1" 200 78902
+2017-05-05 21:09:16,498 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62657/wd/hub/session/98452c10-31f8-11e7-a866-7ded89d69e86/window {"sessionId": "98452c10-31f8-11e7-a866-7ded89d69e86"}
+2017-05-05 21:09:16,501 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:16,501 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62657/wd/hub/session/98452c10-31f8-11e7-a866-7ded89d69e86 {"sessionId": "98452c10-31f8-11e7-a866-7ded89d69e86"}
+2017-05-05 21:09:16,511 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=yDsDi_gnmCWqsM%253A%253B_EHXdLwxUf7H-M%253Bhttp%25253A%25252F%25252Ftime.com%25252Ftime-person-of-the-year-2015-angela-merkel-choice%25252F&source=iu&pf=m&fir=yDsDi_gnmCWqsM%253A%252C_EHXdLwxUf7H-M%252C_&usg=__hh8xG1HG4FvtWDSLRdapCXqUXIk%3D
+angela_merkel
+Creating candidate file name ....   
+1300_39_angela_merkel_4.jpg
+2017-05-05 21:09:17,702 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62755/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:09:17,714 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:17,714 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62755/wd/hub/session/a0c64bd0-31f8-11e7-b056-e9d79458ee8e/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "a0c64bd0-31f8-11e7-b056-e9d79458ee8e"}
+2017-05-05 21:09:17,718 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:17,718 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62755/wd/hub/session/a0c64bd0-31f8-11e7-b056-e9d79458ee8e/url {"sessionId": "a0c64bd0-31f8-11e7-b056-e9d79458ee8e", "url": "https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=yDsDi_gnmCWqsM%253A%253B_EHXdLwxUf7H-M%253Bhttp%25253A%25252F%25252Ftime.com%25252Ftime-person-of-the-year-2015-angela-merkel-choice%25252F&source=iu&pf=m&fir=yDsDi_gnmCWqsM%253A%252C_EHXdLwxUf7H-M%252C_&usg=__hh8xG1HG4FvtWDSLRdapCXqUXIk%3D"}
+2017-05-05 21:09:20,230 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:20,230 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62755/wd/hub/session/a0c64bd0-31f8-11e7-b056-e9d79458ee8e/element {"sessionId": "a0c64bd0-31f8-11e7-b056-e9d79458ee8e", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:09:21,223 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:21,730 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62755/wd/hub/session/a0c64bd0-31f8-11e7-b056-e9d79458ee8e/element {"sessionId": "a0c64bd0-31f8-11e7-b056-e9d79458ee8e", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:09:21,736 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:24,345 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2017-05-05 21:09:24,346 - apscheduler.scheduler - DEBUG - Next wakeup is due at 2017-05-05 21:09:24.350670-04:00 (in 0.004455 seconds)
+2017-05-05 21:09:24,352 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2017-05-05 21:09:24,352 - apscheduler.scheduler - WARNING - Execution of job "put_in_database (trigger: interval[0:02:30], next run at: 2017-05-05 21:09:24 EDT)" skipped: maximum number of running instances reached (1)
+2017-05-05 21:09:24,353 - apscheduler.scheduler - DEBUG - Next wakeup is due at 2017-05-05 21:11:54.350670-04:00 (in 149.998069 seconds)
+2017-05-05 21:09:25,741 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62755/wd/hub/session/a0c64bd0-31f8-11e7-b056-e9d79458ee8e/element/:wdc:1494032961735/attribute/src {"sessionId": "a0c64bd0-31f8-11e7-b056-e9d79458ee8e", "id": ":wdc:1494032961735", "name": "src"}
+2017-05-05 21:09:25,753 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    http://timedotcom.files.wordpress.com/2015/01/merkel.jpg
+2017-05-05 21:09:29,761 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): timedotcom.files.wordpress.com
+2017-05-05 21:09:30,008 - requests.packages.urllib3.connectionpool - DEBUG - "GET /2015/01/merkel.jpg HTTP/1.1" 301 178
+2017-05-05 21:09:30,012 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): timedotcom.files.wordpress.com
+2017-05-05 21:09:30,329 - requests.packages.urllib3.connectionpool - DEBUG - "GET /2015/01/merkel.jpg HTTP/1.1" 200 51286
+2017-05-05 21:09:30,367 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62755/wd/hub/session/a0c64bd0-31f8-11e7-b056-e9d79458ee8e/window {"sessionId": "a0c64bd0-31f8-11e7-b056-e9d79458ee8e"}
+2017-05-05 21:09:30,370 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:30,370 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62755/wd/hub/session/a0c64bd0-31f8-11e7-b056-e9d79458ee8e {"sessionId": "a0c64bd0-31f8-11e7-b056-e9d79458ee8e"}
+2017-05-05 21:09:30,381 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=ypYS6SeuPxHBwM%253A%253B63OQtWAlGnYAlM%253Bhttps%25253A%25252F%25252Fwww.bundesregierung.de%25252FWebs%25252FBreg%25252FEN%25252FFederalGovernment%25252FCabinet%25252FAngelaMerkel%25252F_node.html&source=iu&pf=m&fir=ypYS6SeuPxHBwM%253A%252C63OQtWAlGnYAlM%252C_&usg=__79xf6M56T80ZitmuieYqbryMBZ8%3D
+angela_merkel
+Creating candidate file name ....   
+1300_40_angela_merkel_5.jpg
+2017-05-05 21:09:31,688 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62853/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:09:31,700 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:31,700 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62853/wd/hub/session/a91c63f0-31f8-11e7-80c5-71f74e788ecf/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "a91c63f0-31f8-11e7-80c5-71f74e788ecf"}
+2017-05-05 21:09:31,704 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:31,704 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62853/wd/hub/session/a91c63f0-31f8-11e7-80c5-71f74e788ecf/url {"sessionId": "a91c63f0-31f8-11e7-80c5-71f74e788ecf", "url": "https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=ypYS6SeuPxHBwM%253A%253B63OQtWAlGnYAlM%253Bhttps%25253A%25252F%25252Fwww.bundesregierung.de%25252FWebs%25252FBreg%25252FEN%25252FFederalGovernment%25252FCabinet%25252FAngelaMerkel%25252F_node.html&source=iu&pf=m&fir=ypYS6SeuPxHBwM%253A%252C63OQtWAlGnYAlM%252C_&usg=__79xf6M56T80ZitmuieYqbryMBZ8%3D"}
+2017-05-05 21:09:34,245 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:34,245 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62853/wd/hub/session/a91c63f0-31f8-11e7-80c5-71f74e788ecf/element {"sessionId": "a91c63f0-31f8-11e7-80c5-71f74e788ecf", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:09:34,489 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:38,493 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62853/wd/hub/session/a91c63f0-31f8-11e7-80c5-71f74e788ecf/element/:wdc:1494032974488/attribute/src {"sessionId": "a91c63f0-31f8-11e7-80c5-71f74e788ecf", "id": ":wdc:1494032974488", "name": "src"}
+2017-05-05 21:09:39,398 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:39,401 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62853/wd/hub/session/a91c63f0-31f8-11e7-80c5-71f74e788ecf/screenshot {"sessionId": "a91c63f0-31f8-11e7-80c5-71f74e788ecf"}
+2017-05-05 21:09:40,161 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:40,197 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): timedotcom.files.wordpress.com
+2017-05-05 21:09:40,251 - requests.packages.urllib3.connectionpool - DEBUG - "GET /2015/01/merkel.jpg HTTP/1.1" 301 178
+2017-05-05 21:09:40,255 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTPS connection (1): timedotcom.files.wordpress.com
+2017-05-05 21:09:40,328 - requests.packages.urllib3.connectionpool - DEBUG - "GET /2015/01/merkel.jpg HTTP/1.1" 200 51286
+2017-05-05 21:09:40,365 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62853/wd/hub/session/a91c63f0-31f8-11e7-80c5-71f74e788ecf/window {"sessionId": "a91c63f0-31f8-11e7-80c5-71f74e788ecf"}
+2017-05-05 21:09:40,367 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:40,367 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:62853/wd/hub/session/a91c63f0-31f8-11e7-80c5-71f74e788ecf {"sessionId": "a91c63f0-31f8-11e7-80c5-71f74e788ecf"}
+2017-05-05 21:09:40,381 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+Starting image save if-loop...:   
+Creating 'candidate' ...   
+ https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=PWmOcDzFW_XVKM%253A%253BvLs-Gt3ojMfSjM%253Bhttp%25253A%25252F%25252Fwww.washingtontimes.com%25252Fnews%25252F2015%25252Fnov%25252F16%25252Fangela-merkel-on-defensive-over-germanys-refugee-p%25252F&source=iu&pf=m&fir=PWmOcDzFW_XVKM%253A%252CvLs-Gt3ojMfSjM%252C_&usg=__QtCJOFK5TECISNl9e4l-y7AziY4%3D
+angela_merkel
+Creating candidate file name ....   
+1300_41_angela_merkel_6.jpg
+2017-05-05 21:09:41,469 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62930/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:09:41,481 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:41,482 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62930/wd/hub/session/aef0b330-31f8-11e7-a404-d19ad1bff693/window/current/size {"width": 1020, "windowHandle": "current", "height": 550, "sessionId": "aef0b330-31f8-11e7-a404-d19ad1bff693"}
+2017-05-05 21:09:41,485 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:41,485 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62930/wd/hub/session/aef0b330-31f8-11e7-a404-d19ad1bff693/url {"sessionId": "aef0b330-31f8-11e7-a404-d19ad1bff693", "url": "https://www.google.com/search?q=angela+merkel&biw=1200&bih=550&site=webhp&tbm=isch&imgil=PWmOcDzFW_XVKM%253A%253BvLs-Gt3ojMfSjM%253Bhttp%25253A%25252F%25252Fwww.washingtontimes.com%25252Fnews%25252F2015%25252Fnov%25252F16%25252Fangela-merkel-on-defensive-over-germanys-refugee-p%25252F&source=iu&pf=m&fir=PWmOcDzFW_XVKM%253A%252CvLs-Gt3ojMfSjM%252C_&usg=__QtCJOFK5TECISNl9e4l-y7AziY4%3D"}
+2017-05-05 21:09:45,301 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:45,301 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:62930/wd/hub/session/aef0b330-31f8-11e7-a404-d19ad1bff693/element {"sessionId": "aef0b330-31f8-11e7-a404-d19ad1bff693", "using": "xpath", "value": "//*[@id=\"irc_cc\"]/div[2]/div[1]/div[2]/div[2]/a/img"}
+2017-05-05 21:09:45,312 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:09:49,317 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:62930/wd/hub/session/aef0b330-31f8-11e7-a404-d19ad1bff693/element/:wdc:1494032985311/attribute/src {"sessionId": "aef0b330-31f8-11e7-a404-d19ad1bff693", "id": ":wdc:1494032985311", "name": "src"}
+2017-05-05 21:09:49,329 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+This is the 'src':    None
+2017-05-05 21:09:53,338 - apscheduler.executors.default - ERROR - Job "put_in_database (trigger: interval[0:02:30], next run at: 2017-05-05 21:11:54 EDT)" raised an exception
+Traceback (most recent call last):
+  File "/Users/jenniferstark/anaconda/envs/googlescraper/lib/python3.5/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "candidate_scraper.py", line 167, in put_in_database
+    res = requests.get(src)
+  File "/Users/jenniferstark/anaconda/envs/googlescraper/lib/python3.5/site-packages/requests/api.py", line 67, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/jenniferstark/anaconda/envs/googlescraper/lib/python3.5/site-packages/requests/api.py", line 53, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/jenniferstark/anaconda/envs/googlescraper/lib/python3.5/site-packages/requests/sessions.py", line 454, in request
+    prep = self.prepare_request(req)
+  File "/Users/jenniferstark/anaconda/envs/googlescraper/lib/python3.5/site-packages/requests/sessions.py", line 388, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/Users/jenniferstark/anaconda/envs/googlescraper/lib/python3.5/site-packages/requests/models.py", line 293, in prepare
+    self.prepare_url(url, params)
+  File "/Users/jenniferstark/anaconda/envs/googlescraper/lib/python3.5/site-packages/requests/models.py", line 353, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+2017-05-05 21:11:54,348 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2017-05-05 21:11:54,350 - apscheduler.scheduler - DEBUG - Next wakeup is due at 2017-05-05 21:11:54.350670-04:00 (in 0.000817 seconds)
+2017-05-05 21:11:54,351 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2017-05-05 21:11:54,352 - apscheduler.executors.default - INFO - Running job "put_in_database (trigger: interval[0:02:30], next run at: 2017-05-05 21:11:54 EDT)" (scheduled at 2017-05-05 21:11:54.350670-04:00)
+2017-05-05 21:11:54,353 - apscheduler.scheduler - DEBUG - Next wakeup is due at 2017-05-05 21:14:24.350670-04:00 (in 149.998892 seconds)
+
+SQLite database Removed!
+The current count is:  25
+2017-05-05 21:11:54,386 - GoogleScraper.core - INFO - Going to scrape 3 keywords with 1 proxies by using 1 threads.
+GoogleSelScrape
+creating a new SelScraper thread instance
+2017-05-05 21:11:54,386 - GoogleScraper.scraping - INFO - [+] SelScrape[localhost][search-type:normal][https://www.google.com/search?] using search engine "google". Num keywords=3, num pages for keyword=[1]
+Run the SelScraper
+set xvfb disply
+2017-05-05 21:11:55,401 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:11:55,413 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:11:55,413 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/window/current/size {"width": 1200, "windowHandle": "current", "height": 550, "sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b"}
+2017-05-05 21:11:55,416 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:11:55,417 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/window/current/position {"x": 400, "sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "windowHandle": "current", "y": 0}
+2017-05-05 21:11:55,419 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:11:55,419 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/url {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "url": "https://www.google.com/search?"}
+2017-05-05 21:11:57,780 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+start `search` function to fill in search engine:  ...
+
+2017-05-05 21:11:57,780 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "name", "value": "q"}
+2017-05-05 21:11:57,793 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:11:57,793 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117792/clear {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117792"}
+2017-05-05 21:11:57,806 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:11:58,059 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117792/value {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117792", "value": ["v", "l", "a", "d", "i", "m", "i", "r", " ", "p", "u", "t", "i", "n", "\ue007"]}
+2017-05-05 21:11:58,106 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,108 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "vladimir putin" with [1] pages, slept 2 seconds before scraping. 1/3 already scraped.
+2017-05-05 21:12:00,109 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:12:00,117 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,118 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117793/text {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117793"}
+2017-05-05 21:12:00,128 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,128 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/source {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b"}
+2017-05-05 21:12:00,154 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,154 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/execute {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:12:00,183 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [21] link results for query "vladimir putin">
+2017-05-05 21:12:00,235 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#pnnext"}
+[92m1/3 keywords processed.[0m2017-05-05 21:12:00,246 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,246 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117794/displayed {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117794"}
+2017-05-05 21:12:00,257 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,257 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117794/enabled {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117794"}
+2017-05-05 21:12:00,264 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,264 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:12:00,268 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,268 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117794/attribute/href {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117794", "name": "href"}
+2017-05-05 21:12:00,275 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,275 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117794/click {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117794"}
+2017-05-05 21:12:00,312 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,312 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "name", "value": "q"}
+2017-05-05 21:12:00,320 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,320 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117792/clear {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117792"}
+2017-05-05 21:12:00,330 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:00,582 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117792/value {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117792", "value": ["a", "n", "g", "e", "l", "a", " ", "m", "e", "r", "k", "e", "l", "\ue007"]}
+2017-05-05 21:12:00,608 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,612 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "angela merkel" with [1] pages, slept 2 seconds before scraping. 2/3 already scraped.
+2017-05-05 21:12:02,612 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:12:02,618 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,618 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117795/text {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117795"}
+2017-05-05 21:12:02,630 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,631 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/source {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b"}
+2017-05-05 21:12:02,658 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,659 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/execute {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:12:02,688 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [23] link results for query "angela merkel">
+2017-05-05 21:12:02,736 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#pnnext"}
+[92m2/3 keywords processed.[0m2017-05-05 21:12:02,740 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,741 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117796/displayed {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117796"}
+2017-05-05 21:12:02,750 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,750 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117796/enabled {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117796"}
+2017-05-05 21:12:02,757 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,757 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:12:02,761 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,762 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117796/attribute/href {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117796", "name": "href"}
+2017-05-05 21:12:02,769 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,769 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117796/click {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117796"}
+2017-05-05 21:12:02,803 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,803 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "name", "value": "q"}
+2017-05-05 21:12:02,808 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:02,808 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117792/clear {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117792"}
+2017-05-05 21:12:02,817 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:03,073 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117792/value {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117792", "value": ["d", "o", "n", "a", "l", "d", " ", "t", "r", "u", "m", "p", "\ue007"]}
+2017-05-05 21:12:03,108 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,113 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "donald trump" with [1] pages, slept 2 seconds before scraping. 3/3 already scraped.
+2017-05-05 21:12:05,113 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:12:05,119 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,119 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117797/text {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117797"}
+2017-05-05 21:12:05,130 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,131 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/source {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b"}
+2017-05-05 21:12:05,159 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,159 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/execute {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:12:05,188 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [21] link results for query "donald trump">
+2017-05-05 21:12:05,239 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#pnnext"}
+[92m3/3 keywords processed.[0m2017-05-05 21:12:05,258 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,259 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117798/displayed {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117798"}
+2017-05-05 21:12:05,270 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,270 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117798/enabled {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117798"}
+2017-05-05 21:12:05,276 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,277 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:12:05,282 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,282 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117798/attribute/href {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117798", "name": "href"}
+2017-05-05 21:12:05,289 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,289 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b/element/:wdc:1494033117798/click {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b", "id": ":wdc:1494033117798"}
+2017-05-05 21:12:05,328 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:12:05,329 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:63523/wd/hub/session/fec54100-31f8-11e7-9b70-6932bdcb7e8b {"sessionId": "fec54100-31f8-11e7-9b70-6932bdcb7e8b"}
+2017-05-05 21:12:05,331 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+serp_id is:   1301
+
+serp_id is:   1302
+
+serp_id is:   1303
+2017-05-05 21:12:12,420 - apscheduler.executors.default - INFO - Job "put_in_database (trigger: interval[0:02:30], next run at: 2017-05-05 21:14:24 EDT)" executed successfully
+2017-05-05 21:14:24,347 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2017-05-05 21:14:24,348 - apscheduler.scheduler - DEBUG - Next wakeup is due at 2017-05-05 21:14:24.350670-04:00 (in 0.002397 seconds)
+2017-05-05 21:14:24,351 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2017-05-05 21:14:24,352 - apscheduler.executors.default - INFO - Running job "put_in_database (trigger: interval[0:02:30], next run at: 2017-05-05 21:14:24 EDT)" (scheduled at 2017-05-05 21:14:24.350670-04:00)
+2017-05-05 21:14:24,352 - apscheduler.scheduler - DEBUG - Next wakeup is due at 2017-05-05 21:16:54.350670-04:00 (in 149.999012 seconds)
+
+SQLite database Removed!
+The current count is:  26
+2017-05-05 21:14:24,378 - GoogleScraper.core - INFO - Going to scrape 3 keywords with 1 proxies by using 1 threads.
+GoogleSelScrape
+creating a new SelScraper thread instance
+2017-05-05 21:14:24,378 - GoogleScraper.scraping - INFO - [+] SelScrape[localhost][search-type:normal][https://www.google.com/search?] using search engine "google". Num keywords=3, num pages for keyword=[1]
+Run the SelScraper
+set xvfb disply
+2017-05-05 21:14:25,391 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session {"desiredCapabilities": {"version": "", "platform": "ANY", "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7", "browserName": "phantomjs", "javascriptEnabled": true}}
+2017-05-05 21:14:25,402 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:25,402 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/window/current/size {"width": 1200, "windowHandle": "current", "height": 550, "sessionId": "582bc250-31f9-11e7-b3d9-69837585419d"}
+2017-05-05 21:14:25,406 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:25,407 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/window/current/position {"x": 400, "sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "windowHandle": "current", "y": 0}
+2017-05-05 21:14:25,409 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:25,409 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/url {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "url": "https://www.google.com/search?"}
+2017-05-05 21:14:27,756 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+start `search` function to fill in search engine:  ...
+
+2017-05-05 21:14:27,756 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "name", "value": "q"}
+2017-05-05 21:14:27,770 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:27,770 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267769/clear {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267769"}
+2017-05-05 21:14:27,784 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:28,036 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267769/value {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267769", "value": ["v", "l", "a", "d", "i", "m", "i", "r", " ", "p", "u", "t", "i", "n", "\ue007"]}
+2017-05-05 21:14:28,084 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,087 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "vladimir putin" with [1] pages, slept 2 seconds before scraping. 1/3 already scraped.
+2017-05-05 21:14:30,088 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:14:30,099 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,099 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267770/text {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267770"}
+2017-05-05 21:14:30,110 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,110 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/source {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d"}
+2017-05-05 21:14:30,139 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,139 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/execute {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:14:30,168 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [21] link results for query "vladimir putin">
+2017-05-05 21:14:30,217 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#pnnext"}
+[92m1/3 keywords processed.[0m2017-05-05 21:14:30,228 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,228 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267771/displayed {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267771"}
+2017-05-05 21:14:30,240 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,241 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267771/enabled {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267771"}
+2017-05-05 21:14:30,248 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,248 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:14:30,253 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,253 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267771/attribute/href {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267771", "name": "href"}
+2017-05-05 21:14:30,267 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,267 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267771/click {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267771"}
+2017-05-05 21:14:30,311 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,311 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "name", "value": "q"}
+2017-05-05 21:14:30,319 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,319 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267769/clear {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267769"}
+2017-05-05 21:14:30,329 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:30,582 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267769/value {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267769", "value": ["a", "n", "g", "e", "l", "a", " ", "m", "e", "r", "k", "e", "l", "\ue007"]}
+2017-05-05 21:14:30,609 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,615 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "angela merkel" with [1] pages, slept 2 seconds before scraping. 2/3 already scraped.
+2017-05-05 21:14:32,615 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:14:32,622 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,622 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267772/text {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267772"}
+2017-05-05 21:14:32,634 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,635 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/source {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d"}
+2017-05-05 21:14:32,662 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,662 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/execute {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:14:32,695 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [23] link results for query "angela merkel">
+2017-05-05 21:14:32,743 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#pnnext"}
+[92m2/3 keywords processed.[0m2017-05-05 21:14:32,749 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,749 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267773/displayed {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267773"}
+2017-05-05 21:14:32,759 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,759 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267773/enabled {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267773"}
+2017-05-05 21:14:32,766 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,766 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:14:32,771 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,771 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267773/attribute/href {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267773", "name": "href"}
+2017-05-05 21:14:32,779 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,779 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267773/click {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267773"}
+2017-05-05 21:14:32,819 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,820 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "name", "value": "q"}
+2017-05-05 21:14:32,827 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:32,828 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267769/clear {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267769"}
+2017-05-05 21:14:32,851 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:33,105 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267769/value {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267769", "value": ["d", "o", "n", "a", "l", "d", " ", "t", "r", "u", "m", "p", "\ue007"]}
+2017-05-05 21:14:33,129 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,132 - GoogleScraper.scraping - INFO - [[google]SelScrape][localhost]]Keyword: "donald trump" with [1] pages, slept 2 seconds before scraping. 3/3 already scraped.
+2017-05-05 21:14:35,133 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#navcnt td.cur"}
+2017-05-05 21:14:35,140 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,140 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267774/text {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267774"}
+2017-05-05 21:14:35,152 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,152 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/source {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d"}
+2017-05-05 21:14:35,182 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,182 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/execute {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "args": [], "script": "return document.body.innerHTML;"}
+2017-05-05 21:14:35,222 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+<SERP[google] has [21] link results for query "donald trump">
+2017-05-05 21:14:35,274 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#pnnext"}
+[92m3/3 keywords processed.[0m2017-05-05 21:14:35,280 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,280 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267775/displayed {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267775"}
+2017-05-05 21:14:35,292 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,292 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267775/enabled {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267775"}
+2017-05-05 21:14:35,302 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,302 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "using": "css selector", "value": "#pnnext"}
+2017-05-05 21:14:35,309 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,310 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267775/attribute/href {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267775", "name": "href"}
+2017-05-05 21:14:35,318 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,319 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d/element/:wdc:1494033267775/click {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d", "id": ":wdc:1494033267775"}
+2017-05-05 21:14:35,355 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2017-05-05 21:14:35,355 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://127.0.0.1:64044/wd/hub/session/582bc250-31f9-11e7-b3d9-69837585419d {"sessionId": "582bc250-31f9-11e7-b3d9-69837585419d"}
+2017-05-05 21:14:35,358 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+
+serp_id is:   1304
+
+serp_id is:   1305
+
+serp_id is:   1306
+2017-05-05 21:14:42,337 - apscheduler.executors.default - INFO - Job "put_in_database (trigger: interval[0:02:30], next run at: 2017-05-05 21:16:54 EDT)" executed successfully

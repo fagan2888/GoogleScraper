@@ -26,10 +26,8 @@ old_images/
 images_TESTING/
 find_desktop_user_agents.py
 nohup.txt
-nohup_21runs_2minSchedule.txt
-TestingmailErrorLogging.png
-TestingEmailErrorLogging.py
-
+TestSelenium.py
+GoogleScraper_Schema.sql
 
 .ipynb_checkpoints
 

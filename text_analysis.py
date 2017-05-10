@@ -39,7 +39,7 @@ def text_stats():
     cursor = db.cursor(pymysql.cursors.DictCursor)
 
     # fetch up to 1000 rows from the DB that are 'results' pages, and have not yet been analyzed
-    sql = "SELECT * from search_engine_results WHERE link_type = 'results' AND content_HTML is NULL LIMIT 500"
+    sql = "SELECT * from search_engine_results_TESTING WHERE link_type = 'results' AND content_HTML is NULL LIMIT 500"
     cursor.execute(sql)
 
     results = cursor.fetchall()
@@ -99,7 +99,7 @@ def text_stats():
             print('grab_datetime', grab_datetime)
 
 
-            query = "UPDATE search_engine_results SET content_HTML = %s, content_text = %s, doc_sentiment = %s, doc_score = %s, doc_mixed = %s, grab_datetime = %s WHERE id = %s"
+            query = "UPDATE search_engine_results_TESTING SET content_HTML = %s, content_text = %s, doc_sentiment = %s, doc_score = %s, doc_mixed = %s, grab_datetime = %s WHERE id = %s"
             data = (content_HTML, content_text, doc_sentiment, doc_score, doc_mixed, grab_datetime, row['id'])
 
             cursor.execute(query, data)

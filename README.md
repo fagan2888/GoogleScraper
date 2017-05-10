@@ -1,5 +1,25 @@
 # GoogleScraper - Scraping search engines professionally
 
+## This repo is copied from [here](https://github.com/NikolaiT/GoogleScraper) and adapted for our work at the Computational Journalism Lab
+This README has been edited to include our changes.
+Changes we made were:
+### Adding Google's main results page _sections_, including:
+* downloading images which appear in the image box in the top right portion of the page when you search known people.
+* Added the ability to collect "In the news" and then the newer "Top Stories" from Google's main Search Results page.
+### Adding database columns, including:
+* Image-related columns: `has_image`, `image_path`, `image_dims`, `image_height`, and `image_width`.
+* News-related columns: `has_image`, `news_date` and `news_source`. Google's "In the News" section has since been changed to "Top Stories". Therefore, we added a column `top_stories`. All these stories come with images, compared with "In the News" where only the first story had an image.
+* Added ability to save data to our own designated database. In our case, MySQL. GoogleScraper automatically creates its own sqlite3 database. To avoid
+taking up space populating two databases, this automatically created one is deleted each time the code scrapes the web.
+* Added text sentiment analysis currently powered by Alchemy sentiment API.
+
+ link_type, serp_id,
+
+
+To use our version
+____
+Original README ...
+
 ## News
 
 GoogleScraper becomes **finally mature!** In the last months I didn't work at all on GoogleScraper. Reason for this was my overall
@@ -32,7 +52,7 @@ Look [here to get an idea how to use asynchronous mode](http://scrapeulous.com/g
 <a name="install" \>
 ## Installation
 
-GoogleScraper is written in Python 3. You should install at least Python 3.4. The last major development was all done with Python3.5. So when using 
+GoogleScraper is written in Python 3. You should install at least Python 3.4. The last major development was all done with Python3.5. So when using
 Ubuntu 15.10 and Python3.5 for instance, please install:
 
 ```
@@ -106,7 +126,7 @@ Scrape all keywords that are in keywords.txt in selenium mode (with real browser
 GoogleScraper -m selenium --keyword-file keywords.txt -v2
 ```
 
-Scrape all keywords that are in 
+Scrape all keywords that are in
 + keywords.txt
 + with http mode
 + using 10 threads

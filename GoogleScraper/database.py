@@ -121,8 +121,9 @@ class SearchEngineResultsPage(Base):
                     parsed = urlparse(link['link'])
 
                     # fill with nones to prevent key errors
+                    # If you add a column to the database, add it here:
                     [link.update({key: None}) for key in ('snippet', 'title', 'visible_link', 'has_image', \
-                    'news_date', 'image_dims','news_source') if key not in link]
+                    'news_date', 'image_dims','news_source', 'top_stories') if key not in link]
 
                     Link(
                         link=link['link'],
@@ -134,10 +135,12 @@ class SearchEngineResultsPage(Base):
                         serp=self,
                         link_type=key,
 
+                        # Also add new columns in your database here:
                         has_image=link['has_image'],
                         image_dims=link['image_dims'],
                         news_date=link['news_date'],
-                        news_source=link['news_source']
+                        news_source=link['news_source'],
+                        top_stories=link['top_stories']
                     )
 
     def set_values_from_scraper(self, scraper):
@@ -181,10 +184,12 @@ class Link(Base):
     rank = Column(Integer)
     link_type = Column(String)
 
+    # update this with any new database columns
     has_image = Column(String)
     image_dims = Column(String)
     news_date = Column(String)
     news_source = Column(String)
+    top_stories = Column(String)
 
     serp_id = Column(Integer, ForeignKey('serp.id'))
     serp = relationship(SearchEngineResultsPage, backref=backref('links', uselist=True))

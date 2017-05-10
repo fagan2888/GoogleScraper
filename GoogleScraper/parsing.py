@@ -197,8 +197,10 @@ class Parser():
                 # print("  ", len(results))
 
                 for index, result in enumerate(results):
+
                     # if result_type == 'image_box':
                     #     print(dir(result))
+
                     # Let's add primitive support for CSS3 pseudo selectors
                     # We just need two of them
                     # ::text
@@ -366,22 +368,23 @@ class GoogleParser(Parser):
                 'title': 'h3.r a::text',
                 'visible_link': 'cite::text'
             },
-            # 'de_ip': {
-            #     'container': '#center_col',
-            #     'result_container': 'li.g ',
-            #     'link': 'h3.r > a:first-child::attr(href)',
-            #     'snippet': 'div.s span.st::text',
-            #     'title': 'h3.r > a:first-child::text',
-            #     'visible_link': 'cite::text'
-            # },
-            # 'de_ip_news_items': {
-            #     'container': 'li.card-section',
-            #     'link': 'a._Dk::attr(href)',
-            #     'snippet': 'span._dwd::text',
-            #     'title': 'a._Dk::text',
-            #     'visible_link': 'cite::text'
-            # },
+            'de_ip': {
+                'container': '#center_col',
+                'result_container': 'li.g ',
+                'link': 'h3.r > a:first-child::attr(href)',
+                'snippet': 'div.s span.st::text',
+                'title': 'h3.r > a:first-child::text',
+                'visible_link': 'cite::text'
+            },
+            'de_ip_news_items': {
+                'container': 'li.card-section',
+                'link': 'a._Dk::attr(href)',
+                'snippet': 'span._dwd::text',
+                'title': 'a._Dk::text',
+                'visible_link': 'cite::text'
+            },
          },
+         # IF YOU'RE NOT IN THE US, CHANGE `us_ip` to your relevant IP, eg `de_ip`
         'image_box':{
             'us_ip':{
                 'container': '#rhs_block',
@@ -392,27 +395,40 @@ class GoogleParser(Parser):
                 'has_image': 'img::attr(alt)',
             },
         },
-        'news_box':{
+        # GOOGLE no longer has a `news_box`. Replaced with `top_stories`
+        # 'news_box':{
+        #     'us_ip':{
+        #         'container': '#center_col',
+        #         'result_container': '.card-section.g',
+        #         'link': 'a._Dk::attr(href)',
+        #         'snippet': 'span.st::text',
+        #         'title': 'a._Dk::text',
+        #         'news_date': '._Ck span:last-child::text',
+        #         'news_source': 'cite::text',
+        #         'has_image': '._WCg::attr(alt)'
+        #     },
+        #},
+        'top_stories':{
             'us_ip':{
-                'container': '#center_col',
-                'result_container': '.card-section.g',
-                'link': 'a._Dk::attr(href)',
-                'snippet': 'span.st::text',
-                'title': 'a._Dk::text',
-                'news_date': '._Ck span:last-child::text',
-                'news_source': 'cite::text',
-                'has_image': '._WCg::attr(alt)'
+                'container': '#center_col', # this has 4 mentions. Seem to not work with either #rso or #center_col
+                'result_container': 'div._Ivo', # has 3 mentions
+                'link': 'a::attr(href)',
+                'image_dims': 'div._h3g::attr(style)',
+                'title': 'div._Jvo div::text',
+                'news_date': 'p span::text',
+                'news_source': 'p cite::text',
+                'has_image': 'img::attr(height)',
             },
         },
-        'ads_main': {
-            'us_ip': {
-                'container': '#center_col',
-                'result_container': 'li.ads-ad',
-                'link': 'h3 a:last-child::attr(href)',
-                'snippet': '.ads-creative::text',
-                'title': 'h3 a:last-child::text',
-                'visible_link': '.ads-visurl cite::text'
-            },
+        # 'ads_main': {
+        #     'us_ip': {
+        #         'container': '#center_col',
+        #         'result_container': 'li.ads-ad',
+        #         'link': 'h3 a:last-child::attr(href)',
+        #         'snippet': '.ads-creative::text',
+        #         'title': 'h3 a:last-child::text',
+        #         'visible_link': '.ads-visurl cite::text'
+        #     },
         #     'de_ip': {
         #         'container': '#center_col',
         #         'result_container': '.ads-ad',
@@ -421,7 +437,7 @@ class GoogleParser(Parser):
         #         'title': 'h3 > a:first-child::text',
         #         'visible_link': '.ads-visurl cite::text'
         #     }
-         },
+        #  },
         'ads_aside': {
 
         }
