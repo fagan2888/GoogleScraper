@@ -16,8 +16,8 @@ To use this version, we recommend you read the original README included below fo
 
 
 To use our version:
-* Install using the instruction in the original README below.
-* Create your own database with if you do not want to use the sqlite3 one automatically created.
+* Install using the instructions in the original README below.
+* Create your own database if you do not want to use the sqlite3 one automatically created.
 * Edit the `keys.conf` file to reflect your database details and your own Alchemy API key. Do not use strings.
 * Edit the `candidate_scraper.py` file where appropriate. Appropriate sections are commented with more details.
 
@@ -25,7 +25,7 @@ To use our version:
 * Run text analysis with `nohup python -u text_analysis.py > nohup_text_analysis.txt &`
 
 ________
-#Original README ...
+# Original README
 
 ## News
 
