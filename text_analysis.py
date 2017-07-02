@@ -39,7 +39,7 @@ def text_stats():
 # 3000 API calls per day = 125 calls per hour
 # alchemy key and api endpoints:
     apikey = alchemy_API
-    urlsentiment_api = 'http://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment' # sentiment analysis of url content
+    urlsentiment_api = 'https://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment' # sentiment analysis of url content
 
 
     db = pymysql.connect(user= aws_username,
