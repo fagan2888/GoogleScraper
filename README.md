@@ -13,9 +13,13 @@ Changes we made are:
 * **Sentiment Analysis** Added text sentiment analysis currently powered by Alchemy sentiment API. This has its own scheduler so it can be run on a different schedule from the main scraper.
 * **Config file** Added a configuration file `keys.conf` for AWS keys (username, password, instance) and alchemy API key.
 To use this version, we recommend you read the original README included below for details on configuration. In addition we
+### Added Time interval testing script
+The script `time_interval_testing.py` can be used to gather data using a set of intervals. The default interval unit is seconds.
+* Recommended to use a separate database table with additional columns for the interval and the datetime.
+* The script collects all the same information as the regular `candidate_scraper` does, but just does not insert them all into the database table.
+* Once the data is collected, methods like Jaccard similarity might be used to determine how similar headlines are within each batch of intervals. For example, if the index indicates that samples acquired during 60 seconds intervals are the same, but samples collected at 120 second intervals are different, you might decide to go ahead with data collection using 120 second intervals, or run a new interval test to include a batch of 90 second intervals.
 
-
-To use our version:
+##To use our version:
 * Install using the instructions in the original README below.
 * Create your own database if you do not want to use the sqlite3 one automatically created.
 * Edit the `keys.conf` file to reflect your database details and your own Alchemy API key. Do not use strings.
@@ -23,6 +27,7 @@ To use our version:
 
 * Run the scraper with `nohup python -u candidate_scraper.py > nohup.txt &`
 * Run text analysis with `nohup python -u text_analysis.py > nohup_text_analysis.txt &`
+* Run interval time testing with `nohup python -u time_interval_testing.py > nohup_intervals.txt &`
 
 ________
 # Original README
