@@ -19,7 +19,7 @@ The script `time_interval_testing.py` can be used to gather data using a set of 
 * The script collects all the same information as the regular `candidate_scraper` does, but just does not insert them all into the database table.
 * Once the data is collected, methods like Jaccard similarity might be used to determine how similar headlines are within each batch of intervals. For example, if the index indicates that samples acquired during 60 seconds intervals are the same, but samples collected at 120 second intervals are different, you might decide to go ahead with data collection using 120 second intervals, or run a new interval test to include a batch of 90 second intervals.
 
-##To use our version:
+## To use our version:
 * Install using the instructions in the original README below.
 * Create your own database if you do not want to use the sqlite3 one automatically created.
 * Edit the `keys.conf` file to reflect your database details and your own Alchemy API key. Do not use strings.
