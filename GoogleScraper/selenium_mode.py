@@ -157,7 +157,7 @@ class SelScrape(SearchEngineScrape, threading.Thread):
         assert self.proxy and self.webdriver, 'Scraper instance needs valid webdriver and proxy instance to make the proxy check'
 
         online = False
-        status = 'Proxy check failed: {host}:{port} is not used while requesting'.format(**self.proxy.__dict__)
+        status = 'Proxy check failed: {host}:{port} is not used while requesting'.format(**self.proxy._asdict())
         ipinfo = {}
 
         try:
@@ -618,16 +618,16 @@ class SelScrape(SearchEngineScrape, threading.Thread):
 
     def run(self):
         """Run the SelScraper."""
-        print("Run the SelScraper")
+        #print("Run the SelScraper")
 
         self._set_xvfb_display()
-        print("set xvfb disply")
+        #print("set xvfb disply")
 
         if not self._get_webdriver():
             raise Exception('{}: Aborting due to no available selenium webdriver.'.format(self.name))
 
         try:
-            self.webdriver.set_window_size(1200, 550)
+            self.webdriver.set_window_size(1200, 800)
             self.webdriver.set_window_position(400 * (self.browser_num % 4), 400 * (math.floor(self.browser_num // 4)))
         except WebDriverException as e:
             logger.debug('Cannot set window size: {}'.format(e))
