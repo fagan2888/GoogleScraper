@@ -411,7 +411,7 @@ class GoogleParser(Parser):
         'top_stories':{
             'us_ip':{
                 'container': '#center_col', # this has 4 mentions. Seem to not work with either #rso or #center_col
-                'result_container': 'div._Ivo', # has 3 mentions
+                'result_container': 'div._Pcr', # has 3 mentions
                 'link': 'a::attr(href)',
                 'image_dims': 'div._h3g::attr(style)',
                 'title': 'div._Jvo div::text',
@@ -420,6 +420,18 @@ class GoogleParser(Parser):
                 'has_image': 'img::attr(height)',
             },
         },
+        # 'top_stories':{
+        #     'us_ip':{
+        #         'container': '#center_col', # this has 4 mentions. Seem to not work with either #rso or #center_col
+        #         'result_container': 'div._Ivo', # has 3 mentions
+        #         'link': 'a::attr(href)',
+        #         'image_dims': 'div._h3g::attr(style)',
+        #         'title': 'div._Jvo div::text',
+        #         'news_date': 'p span::text',
+        #         'news_source': 'p cite::text',
+        #         'has_image': 'img::attr(height)',
+        #     },
+        # },
         # 'ads_main': {
         #     'us_ip': {
         #         'container': '#center_col',
