@@ -289,8 +289,9 @@ def main(return_results=False, parse_cmd_line=True, config_from_dict=None):
     elif proxy_file:
         proxies = parse_proxy_file(proxy_file)
 
-    if config.get('use_own_ip'):
+    if config.get('use_own_ip') == True:
         proxies.append(None)
+
 
     if not proxies:
         raise Exception('No proxies available and using own IP is prohibited by configuration. Turning down.')
