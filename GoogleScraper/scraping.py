@@ -348,7 +348,11 @@ class SearchEngineScrape(metaclass=abc.ABCMeta):
 
     def detection_prevention_sleep(self):
         # match the largest sleep range
-        self.current_delay = random.randrange(*self._largest_sleep_range(self.search_number))
+        if self.config.get('detection_prevention_sleep', True):
+            self.current_delay = random.randrange(*self._largest_sleep_range(self.search_number))
+            print ("delay", self.current_delay)
+        else:
+            self.current_delay = 0
         time.sleep(self.current_delay)
 
     def after_search(self):
@@ -370,7 +374,7 @@ class SearchEngineScrape(metaclass=abc.ABCMeta):
         """Things that need to happen before entering the search loop."""
         # check proxies first before anything
         if self.config.get('check_proxies', True) and self.proxy:
-            if not self.proxy_check():
+            if not self.proxy_check(self.proxy):
                 self.startable = False
 
     def update_proxy_status(self, status, ipinfo=None, online=True):
